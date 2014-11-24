@@ -1,0 +1,161 @@
+snippet a "eax"
+eax
+endsnippet
+
+snippet b "ebx"
+ebx
+endsnippet
+
+snippet c "ecx"
+ecx
+endsnippet
+
+snippet d "edx"
+edx
+endsnippet
+
+snippet s "esi"
+esi
+endsnippet
+
+snippet di "edi"
+edi
+endsnippet
+
+snippet bp "ebp"
+ebp
+endsnippet
+
+snippet sp "esp"
+esp
+endsnippet
+
+snippet m "mov"
+mov
+endsnippet
+
+snippet pu "push"
+push
+endsnippet
+
+snippet po "pop"
+pop
+endsnippet
+
+snippet asm "asm struct"
+section .text
+global main
+main:
+	push ebp
+	mov ebp, esp
+	$0
+	pop ebp
+	; exit 0
+	mov eax, 0x1
+	xor ebx, ebx
+	int 0x80
+
+
+section .data
+${1:;data}
+endsnippet
+
+snippet data "data"
+section .data
+${1:;data}
+endsnippet
+
+snippet text "text"
+section .text
+global _start
+_start:
+$0
+endsnippet
+
+snippet int "int 0x80"
+int 0x80
+endsnippet
+
+snippet asci ".ascii '...'"
+.ascii "${VISUAL}${0}"
+endsnippet
+
+snippet func ".type ..., @function"
+.type ${VISUAL}${0}, @function
+endsnippet
+
+snippet ex "exit"
+; exit
+mov 0x1, eax
+int 0x80
+endsnippet
+
+snippet ex0 "exit 0"
+; exit 0
+mov eax, 0x1
+xor ebx, ebx
+int 0x80
+endsnippet
+
+snippet su "set up"
+; set up
+push ebp
+mov esp, ebp
+endsnippet
+
+snippet fi "finish"
+; finish
+leave
+ret
+endsnippet
+
+snippet inc ".include '...'"
+.include "${VISUAL}${0}"
+endsnippet
+
+snippet rept "rept"
+.rept ${1}
+${VISUAL}${0}
+.endr
+endsnippet
+
+snippet opr "open file for reading"
+; open file for reading
+mov eax, 5
+mov ebx, ${1}
+mov ecx, 0
+mov edx, 0666
+int 0x80
+$0
+endsnippet
+
+snippet opw "open file for writing"
+; open file for writing
+mov eax, 5
+mov ebx, ${1}
+movl ecx, 03101
+movl edx, 0666
+int 0x80
+$0
+endsnippet
+
+snippet cl "close file"
+; close file
+mov eax, 0x6
+mov ebx, ${1}
+int 0x80
+endsnippet
+
+snippet pr "print"
+; print
+mov eax, 4
+mov ebx, 1
+mov ecx, ${1}
+mov edx, ${2}
+int 0x80
+endsnippet
+
+snippet eof "eof"
+cmp eax, 0
+jle ${1:end_loop}
+endsnippet

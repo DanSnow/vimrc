@@ -1,0 +1,135 @@
+snippet a "%eax"
+%eax
+endsnippet
+
+snippet b "%ebx"
+%ebx
+endsnippet
+
+snippet c "%ecx"
+%ecx
+endsnippet
+
+snippet d "%edx"
+%edx
+endsnippet
+
+snippet s "%esi"
+%esi
+endsnippet
+
+snippet di "%edi"
+%edi
+endsnippet
+
+snippet bp "%ebp"
+%ebp
+endsnippet
+
+snippet sp "%esp"
+%esp
+endsnippet
+
+snippet m "movl"
+movl 
+endsnippet
+
+snippet pu "pushl"
+pushl 
+endsnippet
+
+snippet po "popl"
+popl 
+endsnippet
+
+snippet text "text"
+.section .text
+.globl _start
+_start:
+endsnippet
+
+snippet int "int $0x80"
+int `!p snip.rv = '$0'`x80
+endsnippet
+
+snippet asci ".ascii '...'"
+.ascii "${VISUAL}${0}"
+endsnippet
+
+snippet func ".type ..., @function"
+.type ${VISUAL}${0}, @function
+endsnippet
+
+snippet ex "exit"
+# exit
+movl `!p snip.rv = '$1'`, %eax
+int `!p snip.rv = '$0'`x80
+endsnippet
+
+snippet ex0 "exit 0"
+# exit 0
+movl `!p snip.rv = '$1'`, %eax
+xorl %ebx, %ebx
+int `!p snip.rv = '$0'`x80
+endsnippet
+
+snippet su "set up"
+# set up
+pushl %ebp
+movl %esp, %ebp
+endsnippet
+
+snippet fi "finish"
+# finish
+leave
+ret
+endsnippet
+
+snippet inc ".include '...'"
+.include "${VISUAL}${0}"
+endsnippet
+
+snippet rept "rept"
+.rept ${1}
+${VISUAL}${0}
+.endr
+endsnippet
+
+snippet opr "open file for reading"
+# open file for reading
+movl $`!p snip.rv = '5'`, %eax
+movl ${1}, %ebx
+movl $`!p snip.rv = '0'`, %ecx
+movl $`!p snip.rv = '0666'`, %edx
+int $`!p snip.rv = '0'`x80
+endsnippet
+
+snippet opw "open file for writing"
+# open file for writing
+movl $`!p snip.rv = '5'`, %eax
+movl ${1}, %ebx
+movl $`!p snip.rv = '03101'`, %ecx
+movl $`!p snip.rv = '0666'`, %edx
+int $`!p snip.rv = '0'`x80
+endsnippet
+
+snippet cl "close file"
+# close file
+movl $`!p snip.rv = '6'`, %eax
+movl ${1}, %ebx
+int $`!p snip.rv = '0'`x80
+endsnippet
+
+snippet pr "print"
+# print
+movl $`!p snip.rv = '4'`, %eax
+movl $`!p snip.rv = '1'`, %ebx
+movl ${1}, %ecx
+movl ${2}, %edx
+int $`!p snip.rv = '0'`x80
+endsnippet
+
+snippet eof "eof"
+cmpl $`!p snip.rv = '0'`, %eax
+jle ${1:end_loop}
+endsnippet

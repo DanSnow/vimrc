@@ -1,0 +1,5 @@
+let g:C_SourceCodeExtensions  = 'h cc cp c cxx cpp CPP c++ C i ii'
+let g:C_CFlags = '-std=gnu99 -Wall -g -O2 -c'
+let g:C_LFlags = '-std=gnu99 -Wall -g -O2 -c'
+let g:C_CplusCFlags = '-std=gnu++11 -Wall -g -O2 -c'
+let g:C_CplusLFlags = '-std=gnu++11 -Wall -g -O2 -c'

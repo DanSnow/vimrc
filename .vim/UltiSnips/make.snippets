@@ -1,0 +1,99 @@
+snippet make "Make file basic"
+CC= gcc
+CCFLAGS=
+INCLUDE= -I.
+LIB=
+
+all:
+
+clean:
+	@rm -f *.o
+
+rebuild: clean all
+
+%.o: %.c
+	$(CC) $(CCFLAGS) -c $< $(INCLUDE) -o $@
+
+endsnippet
+
+snippet clean "clean part"
+clean:
+	-rm -rf $(BUILD_PATH)
+	-rm $(filter-out $(DIST_SRC), $(shell find | sed 's#\./##g' | sed '/\.git/d'))
+endsnippet
+
+snippet tar "packge to tar.gz"
+dist:
+	tar -zcf dist.tar.gz $(DIST_SRC)
+release: $(RELEASE_SRC)
+	tar -zcf release.tar.gz $(RELEASE_SRC)
+endsnippet
+
+snippet info "info part"
+info:
+	@echo "CPP_SOURCES:\t$(CPP_SOURCES)"
+	@echo "CPP_OBJS:\t$(CPP_OBJS)"
+	@echo "CPP_FPIC_OBJS:\t$(CPP_FPIC_OBJS)\n"
+	@echo "RELEASE_SRC:\t$(RELEASE_SRC)\n"
+endsnippet
+
+snippet build "build"
+BUILD_PATH = build
+init:
+	$(foreach d, ${1:$(SRC_DIRS)}, mkdir -p $(BUILD_PATH)/$(d);)
+endsnippet
+
+snippet gcc "gcc configures"
+CC = gcc
+C_FLAGS = -Wall -Werror
+INCLUDES =  # TODO(ziv): eg. -I include
+LIBS =  # TODO(ziv): eg. -L lib
+LINK_FLAGS =  # TODO(ziv): eg. -l lxxx
+endsnippet
+
+snippet cpsrc ".cpp sources"
+SRC_DIRS =
+CPP_SOURCES = $(filter-out %_test.cpp, $(foreach d, $(SRC_DIRS), $(wildcard $(d)/*.cpp)))
+CPP_OBJS = $(patsubst %.cpp, $(BUILD_PATH)/%.o, $(CPP_SOURCES))
+$(CPP_OBJS): $(BUILD_PATH)/%.o: %.cpp
+	$(CC) -c $< $(C_FLAGS) $(INCLUDES) $(LIBS) $(LINK_FLAGS) -o $@
+endsnippet
+
+snippet csrc ".c sources"
+SRC_DIRS =
+C_SOURCES = $(filter-out %_test.c, $(foreach d, $(SRC_DIRS), $(wildcard $(d)/*.c)))
+C_OBJS = $(patsubst %.c, $(BUILD_PATH)/%.o, $(C_SOURCES))
+$(C_OBJS): $(BUILD_PATH)/%.o: %.c
+	$(CC) -c $< $(C_FLAGS) $(INCLUDES) $(LIBS) $(LINK_FLAGS) -o $@
+endsnippet
+
+snippet cco "generate a target form .cc"
+${1:test}: $(CPP_OBJS) ${2:test.cc}
+	$(CC) $^ $(C_FLAGS) $(INCLUDES) $(LIBS) $(LINK_FLAGS) -o ${3:test}
+endsnippet
+
+snippet pyc "wrap c srcs to py module"
+# wrap c srcs to py module - $(PY_MODULE).so
+PY_BUILD_PATH = py_build  # TODO(ziv): confirm build path
+PY_MODULE = ${1}
+PY_WRAPPER = py_wrapper.cc  # TODO(ziv): confirm wrapper name
+PY_FLAGS = -I /usr/include/python2.7 -I /usr/lib/python2.7/config  # TODO(ziv): confirm flags
+CPP_FPIC_OBJS = $(patsubst %.cpp, $(PY_BUILD_PATH)/%.o, $(CPP_SOURCES))  # TODO(ziv): confirm c srcs
+PYWRAPPER_OBJS = $(patsubst %.cc, $(PY_BUILD_PATH)/%.o, $(PYWRAPPER))  # TODO(ziv): confirm wrapper suffix
+py_build: $(CPP_FPIC_OBJS) $(PY_WRAPPER_OBJ)
+	$(CC) -shared -o $(PY_MODULE).so $^
+$(CPP_FPIC_OBJS): $(PY_BUILD_PATH)/%.o: %.cpp  # TODO(ziv): confirm c srcs suffix
+	$(CC) -c $(CFLAGS) $(INCLUDES) $(LIBS) $(LINK_FLAGS) $< -o $@ -fpic
+$(PY_WRAPPER_OBJ): $(PY_BUILD_PATH)/%.o: %.cc  # TODO(ziv): confirm wrapper srcs suffix
+	$(CC) -c $(CFLAGS) $(INCLUDES) $(LIBS) $(LINK_FLAGS) $< -o $@ -fpic $(PY_FLAGS)
+endsnippet
+
+snippet asm "asm"
+ASM_TARGET = ${1}
+ASM_SOURCES = $(wildcard *.s)
+ASM_OBJECTS = $(ASM_SOURCES:%.s=%.o)
+$(ASM_TARGET): $(ASM_OBJECTS)
+	ld $(ASM_OBJECTS) -o $(ASM_TARGET)
+%.o: %.s
+	as $< -o $@
+endsnippet

@@ -1,0 +1,14 @@
+############################
+#  Snippet for live script #
+#  Author: DanSnow         #
+############################
+
+
+snippet req "require"
+${2:`!p snip.rv = t[1].split("-")[0] + "".join(x.title() for x in t[1].split("-")[1:])`} = require("${1:libName}")
+endsnippet
+
+snippet fun "function"
+${1:func} = (${2:arg})->
+	${3://code}
+endsnippet
