@@ -75,6 +75,9 @@ filetype on                           " enable filetype detection
 filetype indent on                    " enable filetype-specific indenting
 filetype plugin on                    " enable filetype-specific plugins
 
+let mapleader=','
+let g:mapleader=','
+
 syntax on                             " syntax highlight
 syntax enable
 
@@ -100,6 +103,9 @@ noremap <F7> gT
 noremap <F8> gt
 inoremap <F7> <esc>gTa
 inoremap <F8> <esc>gta
+
+noremap <leader>p :bp!<cr>
+noremap <leader>n :bn!<cr>
 
 " identation
 nmap <TAB> v>
