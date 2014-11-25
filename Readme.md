@@ -1,7 +1,14 @@
 My vimrc
 =====
 
+# Screenshot #
+
+# Installation #
+
+# Key Mapping #
+
 # Plugin #
+I admit the amount of plugin cause performance problem. But it useful, maybe.
 ## Plugin Manager ##
 - [Vundle](https://github.com/gmarik/vundle)
 ## Interface ##
