@@ -6,6 +6,6 @@ call unite#custom#profile('default', 'context', {
 	\ })
 noremap <C-p> :Unite<cr>
 nnoremap <leader>t :<C-u>Unite -no-split -buffer-name=files   -start-insert filetype<cr>
-nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files   -start-insert file<cr>
+nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files   -start-insert file file/new directory/new<cr>
 nnoremap <leader>y :<C-u>Unite -no-split -buffer-name=yank    history/yank<cr>
 nnoremap <leader>e :<C-u>Unite -no-split -buffer-name=buffer  buffer<cr>
