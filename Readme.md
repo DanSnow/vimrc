@@ -1,9 +1,20 @@
 My vimrc
 =====
 
+# Description #
+This is my vimrc. It contain some awesome plugin, and user friendly setting.
+
 # Screenshot #
 
 # Installation #
+
+You will need Internet connect.
+Under terminal type:
+```shell
+vim +PluginInstall +qall
+```
+It will have some of error at first. Just ignore it.
+After finish you can start use your vim.
 
 # Key Mapping #
 
