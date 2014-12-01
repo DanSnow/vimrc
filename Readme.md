@@ -26,33 +26,33 @@ These are my custom or common using key mapping. For plugin key mapping, you sho
 \<leader\>: ,
 
 Normal mode:
-- <F1>: Toggle UndoTree
-- <F2>: Toggle NERDTree
-- <F3>: Toggle Tagbar
-- <F4>: Toggle highlight search
-- <F5>: Toggle QuickFix
-- <F6>: Format code(Require astyle, nodejs. Only for C, C++, Java, Html, CSS, JavaScript)
-- <F7>: Previous tab
-- <F8>: Next tab
-- <F9>: Compile or run (By SingleCompile)
-- <Tab>: Increase indent to current line
-- <S-Tab>: Decrease indent to current line
-- <leader>f: Unite file
-- <leader>e: Unite buffer
-- <leader>t: Unite filetype
-- <leader>y: Unite yank history
-- <leader>p: Previous buffer
-- <leader>n: Next bufer
-- <leader>z: Toggle persent Mode
-- <M-Right>: Increse horizontal size (When window split)
-- <M-Left>: Decrese horizontal size (When window split)
-- <M-Down>: Increse vertical size (When window split)
-- <M-Up>: Decrese vertical size (When window split)
+- \<F1\>: Toggle UndoTree
+- \<F2\>: Toggle NERDTree
+- \<F3\>: Toggle Tagbar
+- \<F4\>: Toggle highlight search
+- \<F5\>: Toggle QuickFix
+- \<F6\>: Format code(Require astyle, nodejs. Only for C, C++, Java, Html, CSS, JavaScript)
+- \<F7\>: Previous tab
+- \<F8\>: Next tab
+- \<F9\>: Compile or run (By SingleCompile)
+- \<Tab>: Increase indent to current line
+- \<S-Tab\>: Decrease indent to current line
+- \<leader\>f: Unite file
+- \<leader\>e: Unite buffer
+- \<leader\>t: Unite filetype
+- \<leader\>y: Unite yank history
+- \<leader\>p: Previous buffer
+- \<leader\>n: Next bufer
+- \<leader\>z: Toggle persent Mode
+- \<M-Right\>: Increse horizontal size (When window split)
+- \<M-Left\>: Decrese horizontal size (When window split)
+- \<M-Down\>: Increse vertical size (When window split)
+- \<M-Up\>: Decrese vertical size (When window split)
 - gcc: Toggle current comment(By tComment)
 
 Visual mode:
-- <Tab>: Increase select line indent
-- <S-Tab>: Decrease select line indent
+- \<Tab\>: Increase select line indent
+- \<S-Tab\>: Decrease select line indent
 
 # Plugin #
 I admit the amount of plugin cause performance problem. But it useful, maybe.
