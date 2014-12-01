@@ -23,7 +23,7 @@ After finish you can start use your vim.
 
 These are my custom or common using key mapping. For plugin key mapping, you should reference their document for full help.
 
-<leader>: ,
+\<leader\>: ,
 
 Normal mode:
 - <F1>: Toggle UndoTree
