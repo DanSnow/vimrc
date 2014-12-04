@@ -37,6 +37,7 @@ Normal mode:
 - \<F9\>: Compile or run (By SingleCompile)
 - \<Tab>: Increase indent to current line
 - \<S-Tab\>: Decrease indent to current line
+- \<leader\>a: Jump to header file(By a.vim)
 - \<leader\>f: Unite file
 - \<leader\>e: Unite buffer
 - \<leader\>t: Unite filetype
@@ -44,6 +45,7 @@ Normal mode:
 - \<leader\>p: Previous buffer
 - \<leader\>n: Next bufer
 - \<leader\>z: Toggle persent Mode
+- \<C-p\>: Unite
 - \<M-Right\>: Increse horizontal size (When window split)
 - \<M-Left\>: Decrese horizontal size (When window split)
 - \<M-Down\>: Increse vertical size (When window split)
@@ -64,7 +66,6 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 ## File Explorer ##
 - [Unite](https://github.com/Shougo/unite.vim) (File finder)
   - [unite-filetype](https://github.com/osyo-manga/unite-filetype)
-  - [unite-tag](https://github.com/tsukkee/unite-tag)
 - [nerdtree](https://github.com/scrooloose/nerdtree) (Explorer)
 
 ## Code Display ##
@@ -76,6 +77,7 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [delimitMate](https://github.com/Raimondi/delimitMate)
 - [ultisnips](https://github.com/SirVer/ultisnips)
 - [vim-endwise](https://github.com/tpope/vim-endwise)
+- [emmet](https://github.com/mattn/emmet-vim)
 
 ## Utils ##
 - [matchit](https://github.com/tmhedberg/matchit)
@@ -87,7 +89,6 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [vim-repeat](https://github.com/tpope/vim-repeat)
 - [vim-fugitive](https://github.com/tpope/vim-fugitive) (Git binding)
 - [undotree](https://github.com/mbbill/undotree)
-- [YankRing.vim](https://github.com/vim-scripts/YankRing.vim)
 - [vim-eunuch](https://github.com/tpope/vim-eunuch) (Add utils function for linux)
 - [vimshell.vim](https://github.com/Shougo/vimshell.vim)
   - [vimproc.vim](https://github.com/Shougo/vimproc.vim)
