@@ -107,6 +107,10 @@ inoremap <F8> <esc>gta
 noremap <leader>p :bp!<cr>
 noremap <leader>n :bn!<cr>
 
+noremap <silent> <leader>a :A<cr>
+
+map <leader>gf :e <cfile><cr>
+
 " identation
 nmap <TAB> v>
 nmap <S-TAB> v<
