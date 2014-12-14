@@ -3,6 +3,7 @@ set backspace=2                       " allow backspacing over everything in ins
 set history=1000                      " keep 1000 lines of command line history
 set undolevels=100
 set si
+set cinoptions+=g1,h2
 set ruler                             " show the cursor position all the time
 set autoread                          " auto read when file is changed from outside
 set wrap

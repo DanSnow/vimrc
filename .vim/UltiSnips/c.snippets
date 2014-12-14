@@ -46,9 +46,29 @@ int main(int argc, char *argv[]) {
 }
 endsnippet
 
+snippet cmocka "cmocka test" b
+#include <stdio.h>
+#include <setjmp.h>
+#include <stdarg.h>
+#include <cmocka.h>
+
+#include "${1:`!p snip.rv = fn.replace("test_", "")`}"
+
+void ${2:test_name}(void **state) {
+	${3:/*code*/}
+}
+
+int main(int argc, char *argv[]) {
+	UnitTest unitTest[] = {
+		unit_test($2)
+	};
+	return run_tests(unitTest);
+}
+endsnippet
+
 snippet func "function"
 ${2:int} ${1:func}(${3:void}) {
-  $4
+	$4
 }
 endsnippet
 
