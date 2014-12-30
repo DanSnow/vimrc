@@ -1,3 +1,6 @@
+snippet inc "%include" !b
+%include "$1"$0
+endsnippet
 snippet a "eax"
 eax
 endsnippet
@@ -107,10 +110,6 @@ snippet fi "finish"
 ; finish
 leave
 ret
-endsnippet
-
-snippet inc ".include '...'"
-.include "${VISUAL}${0}"
 endsnippet
 
 snippet rept "rept"
