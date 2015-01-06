@@ -27,7 +27,11 @@ Plugin 'osyo-manga/unite-filetype'
 " Motion
 Plugin 'CamelCaseMotion'
 
+" Syntax Check
+Plugin 'syntastic'
+
 " Completion
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'Raimondi/delimitMate'
 Plugin 'SirVer/ultisnips'
 Plugin 'tpope/vim-endwise'
@@ -43,9 +47,6 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/vimshell.vim'
 Plugin 'tpope/vim-eunuch'
 
-" Syntax Check
-Plugin 'syntastic'
-
 " Utility
 Plugin 'SingleCompile'
 Plugin 'tmhedberg/matchit'
@@ -57,6 +58,8 @@ Plugin 'tpope/vim-repeat'
 Plugin 'mbbill/undotree'
 
 " Highlight & Language support
+
+Plugin 'Valloric/vim-operator-highlight'
 
 " Ruby
 Plugin 'vim-ruby/vim-ruby'
@@ -71,6 +74,7 @@ Plugin 'Qt.vim'
 Plugin 'peterhoeg/vim-qml'
 Plugin 'ciaranm/googletest-syntax'
 Plugin 'SWIG-syntax'
+Plugin 'justinmk/vim-syntax-extra'
 
 " Html
 Plugin 'othree/html5-syntax.vim'
@@ -88,6 +92,7 @@ Plugin 'ap/vim-css-color'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'rstacruz/vim-ultisnips-css'
 Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'wavded/vim-stylus'
 
 " Python
 Plugin 'hynek/vim-python-pep8-indent'
@@ -102,7 +107,7 @@ Plugin 'keithbsmiley/rspec.vim'
 
 " Other
 Plugin 'plasticboy/vim-markdown'
-" Plugin 'fatih/vim-go'
+Plugin 'fatih/vim-go'
 Plugin 'Shougo/vinarise.vim'
 Plugin 'chrisbra/csv.vim'
 Plugin 'nginx.vim'
