@@ -60,6 +60,7 @@ Plugin 'mbbill/undotree'
 " Highlight & Language support
 
 Plugin 'Valloric/vim-operator-highlight'
+Plugin 'DanSnow/Block.vim'
 
 " Ruby
 Plugin 'vim-ruby/vim-ruby'
