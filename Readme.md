@@ -59,7 +59,8 @@ Visual mode:
 # Plugin #
 I admit the amount of plugin cause performance problem. But it useful, maybe.
 ## Plugin Manager ##
-- [Vundle](https://github.com/gmarik/vundle)
+- [Vim-Plug](https://github.com/junegunn/vim-plug)
+**Note: ** This manager seem faster but ruby support is needed.
 
 ## Interface ##
 - [vim-airline](https://github.com/bling/vim-airline)
