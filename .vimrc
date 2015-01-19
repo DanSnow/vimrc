@@ -39,7 +39,7 @@ Plug 'mattn/emmet-vim'
 
 " Navigation
 Plug 'a.vim'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'majutsushi/tagbar'
 
 Plug 'tpope/vim-fugitive'
@@ -59,45 +59,46 @@ Plug 'mbbill/undotree'
 
 " Highlight & Language support
 
+" Plugin 'Valloric/vim-operator-highlight'
 Plug 'DanSnow/Block.vim'
 
 " Ruby
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
-Plug 't9md/vim-ruby-xmpfilter'
+Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
+Plug 'tpope/vim-rails', {'for': 'ruby'}
+Plug 't9md/vim-ruby-xmpfilter', {'for': 'ruby'}
 
 " C/C++
-Plug 'c.vim'
-Plug 'cSyntaxAfter'
-Plug 'gtk-vim-syntax'
-Plug 'Qt.vim'
+Plug 'c.vim', {'for': ['c', 'cpp']}
+Plug 'cSyntaxAfter', {'for': ['c', 'cpp']}
+Plug 'gtk-vim-syntax', {'for': ['c', 'cpp']}
+Plug 'Qt.vim', {'for': 'cpp'}
 Plug 'peterhoeg/vim-qml'
-Plug 'ciaranm/googletest-syntax'
+Plug 'ciaranm/googletest-syntax', {'for': 'cpp'}
 Plug 'SWIG-syntax'
 Plug 'justinmk/vim-syntax-extra'
 
 " Html
-Plug 'othree/html5.vim'
-Plug 'gregsexton/MatchTag'
-Plug 'tpope/vim-haml'
-Plug 'slim-template/vim-slim'
+Plug 'othree/html5.vim', {'for': 'html'}
+Plug 'gregsexton/MatchTag', {'for': 'html'}
+Plug 'tpope/vim-haml', {'for': ['haml', 'scss', 'sass']}
+Plug 'slim-template/vim-slim', {'for': 'slim'}
 
 " JS
-Plug 'maksimr/vim-jsbeautify'
-Plug 'kchmck/vim-coffee-script'
-Plug 'gkz/vim-ls'
-Plug 'digitaltoad/vim-jade'
+Plug 'maksimr/vim-jsbeautify', {'for': 'javascript'}
+Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
+Plug 'gkz/vim-ls', {'for': 'ls'}
+Plug 'digitaltoad/vim-jade', {'for': 'jade'}
 
 " CSS
 Plug 'ap/vim-css-color'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'rstacruz/vim-ultisnips-css'
 Plug 'cakebaker/scss-syntax.vim'
-Plug 'wavded/vim-stylus'
+Plug 'wavded/vim-stylus', {'for': 'stylus'}
 
 " Python
-Plug 'hynek/vim-python-pep8-indent'
-Plug 'sentientmachine/Pretty-Vim-Python'
+Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
+Plug 'sentientmachine/Pretty-Vim-Python', {'for': 'python'}
 
 " Tools
 Plug 'scons.vim'
@@ -111,7 +112,7 @@ Plug 'derekwyatt/vim-scala'
 Plug 'xsbeats/vim-blade'
 Plug 'plasticboy/vim-markdown'
 Plug 'fatih/vim-go'
-Plug 'Shougo/vinarise.vim'
+Plug 'Shougo/vinarise.vim', {'on': 'Vinarise'}
 Plug 'chrisbra/csv.vim'
 Plug 'nginx.vim'
 call plug#end()
