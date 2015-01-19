@@ -60,6 +60,7 @@ Visual mode:
 I admit the amount of plugin cause performance problem. But it useful, maybe.
 ## Plugin Manager ##
 - [Vim-Plug](https://github.com/junegunn/vim-plug)
+
 **Note: ** This manager seem faster but ruby support is needed.
 
 ## Interface ##
