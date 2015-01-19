@@ -2,112 +2,116 @@ set encoding=utf-8
 set fileencodings=utf-8,cp950
 
 let iCanHazVundle=1
-let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+let vundle_readme=expand('~/.vim/bundle/vim-plug/README.md')
 if !filereadable(vundle_readme)
-  echo "Installing Vundle.."
+  echo "Installing Vim-Plug.."
   echo ""
   silent !mkdir -p ~/.vim/bundle
-  silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+  silent !git clone https://github.com/junegunn/vim-plug ~/.vim/bundle/vim-plug
   let iCanHazVundle=0
 endif
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+so ~/.vim/bundle/vim-plug/plug.vim
+call plug#begin("~/.vim/bundle")
 
 " Package Manager
-Plugin 'gmarik/vundle'
+Plug 'junegunn/vim-plug'
 
 " Interface
-Plugin 'bling/vim-airline'
+Plug 'bling/vim-airline'
 
 " Unite ( utility finder )
-Plugin 'Shougo/unite.vim'
-Plugin 'osyo-manga/unite-filetype'
+Plug 'Shougo/unite.vim'
+Plug 'osyo-manga/unite-filetype'
 
 " Motion
-Plugin 'CamelCaseMotion'
+Plug 'CamelCaseMotion'
 
 " Syntax Check
-Plugin 'syntastic'
+Plug 'syntastic'
 
 " Completion
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'Raimondi/delimitMate'
-Plugin 'SirVer/ultisnips'
-Plugin 'tpope/vim-endwise'
-Plugin 'mattn/emmet-vim'
+Plug 'Valloric/YouCompleteMe'
+Plug 'Raimondi/delimitMate'
+Plug 'SirVer/ultisnips'
+Plug 'tpope/vim-endwise'
+Plug 'mattn/emmet-vim'
 
 " Navigation
-Plugin 'a.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'majutsushi/tagbar'
+Plug 'a.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'majutsushi/tagbar'
 
-Plugin 'tpope/vim-fugitive'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'Shougo/vimshell.vim'
-Plugin 'tpope/vim-eunuch'
+Plug 'tpope/vim-fugitive'
+Plug 'Shougo/vimproc.vim'
+Plug 'Shougo/vimshell.vim'
+Plug 'tpope/vim-eunuch'
 
 " Utility
-Plugin 'SingleCompile'
-Plugin 'tmhedberg/matchit'
-Plugin 'Yggdroot/indentLine'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tpope/vim-surround'
-Plugin 'tComment'
-Plugin 'tpope/vim-repeat'
-Plugin 'mbbill/undotree'
+Plug 'SingleCompile'
+Plug 'tmhedberg/matchit'
+Plug 'Yggdroot/indentLine'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-surround'
+Plug 'tComment'
+Plug 'tpope/vim-repeat'
+Plug 'mbbill/undotree'
 
 " Highlight & Language support
 
-Plugin 'DanSnow/Block.vim'
+Plug 'DanSnow/Block.vim'
 
 " Ruby
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-rails'
-Plugin 't9md/vim-ruby-xmpfilter'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+Plug 't9md/vim-ruby-xmpfilter'
 
 " C/C++
-Plugin 'c.vim'
-Plugin 'cSyntaxAfter'
-Plugin 'gtk-vim-syntax'
-Plugin 'Qt.vim'
-Plugin 'peterhoeg/vim-qml'
-Plugin 'ciaranm/googletest-syntax'
-Plugin 'SWIG-syntax'
-Plugin 'justinmk/vim-syntax-extra'
+Plug 'c.vim'
+Plug 'cSyntaxAfter'
+Plug 'gtk-vim-syntax'
+Plug 'Qt.vim'
+Plug 'peterhoeg/vim-qml'
+Plug 'ciaranm/googletest-syntax'
+Plug 'SWIG-syntax'
+Plug 'justinmk/vim-syntax-extra'
 
 " Html
-Plugin 'othree/html5-syntax.vim'
-Plugin 'gregsexton/MatchTag'
-Plugin 'tpope/vim-haml'
-Plugin 'slim-template/vim-slim'
+Plug 'othree/html5.vim'
+Plug 'gregsexton/MatchTag'
+Plug 'tpope/vim-haml'
+Plug 'slim-template/vim-slim'
 
 " JS
-Plugin 'maksimr/vim-jsbeautify'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'gkz/vim-ls'
+Plug 'maksimr/vim-jsbeautify'
+Plug 'kchmck/vim-coffee-script'
+Plug 'gkz/vim-ls'
+Plug 'digitaltoad/vim-jade'
 
 " CSS
-Plugin 'ap/vim-css-color'
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'rstacruz/vim-ultisnips-css'
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'wavded/vim-stylus'
+Plug 'ap/vim-css-color'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'rstacruz/vim-ultisnips-css'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'wavded/vim-stylus'
 
 " Python
-Plugin 'hynek/vim-python-pep8-indent'
-Plugin 'sentientmachine/Pretty-Vim-Python'
+Plug 'hynek/vim-python-pep8-indent'
+Plug 'sentientmachine/Pretty-Vim-Python'
 
 " Tools
-Plugin 'scons.vim'
-Plugin 'tpope/vim-rake'
-Plugin 'tpope/vim-bundler'
-Plugin 'tfnico/vim-gradle'
-Plugin 'keithbsmiley/rspec.vim'
+Plug 'scons.vim'
+Plug 'tpope/vim-rake'
+Plug 'tpope/vim-bundler'
+Plug 'tfnico/vim-gradle'
+Plug 'keithbsmiley/rspec.vim'
 
 " Other
-Plugin 'plasticboy/vim-markdown'
-Plugin 'fatih/vim-go'
-Plugin 'Shougo/vinarise.vim'
-Plugin 'chrisbra/csv.vim'
-Plugin 'nginx.vim'
+Plug 'derekwyatt/vim-scala'
+Plug 'xsbeats/vim-blade'
+Plug 'plasticboy/vim-markdown'
+Plug 'fatih/vim-go'
+Plug 'Shougo/vinarise.vim'
+Plug 'chrisbra/csv.vim'
+Plug 'nginx.vim'
+call plug#end()
