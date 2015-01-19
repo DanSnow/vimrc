@@ -17,6 +17,8 @@ if !exists("main_syntax")
   syn region javaFold start="{" end="}" transparent fold
 endif
 
+let b:current_syntax = 'java'
+
 " don't use standard HiLink, it will not work with included syntax files
 if version < 508
   command! -nargs=+ JavaHiLink hi link <args>

@@ -123,6 +123,7 @@ map 0 ^
 
 imap <C-a> <C-o>I
 imap <C-e> <C-o>A
+imap <Home> <C-o>I
 
 " return current opened file's dirctory
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
