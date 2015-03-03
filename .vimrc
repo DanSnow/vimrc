@@ -1,21 +1,7 @@
 set encoding=utf-8
 set fileencodings=utf-8,cp950
 
-let iCanHazVundle=1
-let vundle_readme=expand('~/.vim/bundle/vim-plug/README.md')
-if !filereadable(vundle_readme)
-  echo "Installing Vim-Plug.."
-  echo ""
-  silent !mkdir -p ~/.vim/bundle
-  silent !git clone https://github.com/junegunn/vim-plug ~/.vim/bundle/vim-plug
-  let iCanHazVundle=0
-endif
-
-so ~/.vim/bundle/vim-plug/plug.vim
 call plug#begin("~/.vim/bundle")
-
-" Package Manager
-Plug 'junegunn/vim-plug'
 
 " Interface
 Plug 'bling/vim-airline'
@@ -23,6 +9,8 @@ Plug 'bling/vim-airline'
 " Unite ( utility finder )
 Plug 'Shougo/unite.vim'
 Plug 'osyo-manga/unite-filetype'
+Plug 'basyura/unite-rails'
+Plug 'ujihisa/unite-rake'
 
 " Motion
 Plug 'CamelCaseMotion'
@@ -31,7 +19,6 @@ Plug 'CamelCaseMotion'
 Plug 'syntastic'
 
 " Completion
-Plug 'Valloric/YouCompleteMe'
 Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-endwise'
@@ -39,7 +26,7 @@ Plug 'mattn/emmet-vim'
 
 " Navigation
 Plug 'a.vim'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'Shougo/vimfiler.vim'
 Plug 'majutsushi/tagbar'
 
 Plug 'tpope/vim-fugitive'
@@ -54,25 +41,34 @@ Plug 'Yggdroot/indentLine'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
 Plug 'tComment'
+Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat'
-Plug 'mbbill/undotree'
+Plug 'tommcdo/vim-exchange'
+Plug 'godlygeek/tabular'
+Plug 'sjl/gundo.vim'
+Plug 'powerman/vim-plugin-viewdoc'
 
 " Highlight & Language support
 
-" Plugin 'Valloric/vim-operator-highlight'
 Plug 'DanSnow/Block.vim'
+Plug 'Chiel92/vim-autoformat'
+
+" Test
+Plug 'janko-m/vim-test'
+Plug 'tpope/vim-dispatch'
 
 " Ruby
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', {'for': 'ruby'}
-Plug 't9md/vim-ruby-xmpfilter', {'for': 'ruby'}
+Plug 'ngmy/vim-rubocop', {'for': 'ruby'}
+" Plug 't9md/vim-ruby-xmpfilter', {'for': 'ruby'}
 
 " C/C++
 Plug 'c.vim', {'for': ['c', 'cpp']}
 Plug 'cSyntaxAfter', {'for': ['c', 'cpp']}
 Plug 'gtk-vim-syntax', {'for': ['c', 'cpp']}
-Plug 'Qt.vim', {'for': 'cpp'}
-Plug 'peterhoeg/vim-qml'
+" Plug 'Qt.vim', {'for': 'cpp'}
+" Plug 'peterhoeg/vim-qml'
 Plug 'ciaranm/googletest-syntax', {'for': 'cpp'}
 Plug 'SWIG-syntax'
 Plug 'justinmk/vim-syntax-extra'
@@ -84,10 +80,12 @@ Plug 'tpope/vim-haml', {'for': ['haml', 'scss', 'sass']}
 Plug 'slim-template/vim-slim', {'for': 'slim'}
 
 " JS
-Plug 'maksimr/vim-jsbeautify', {'for': 'javascript'}
+Plug 'pangloss/vim-javascript', {'for': 'javascript'}
+" Plug 'maksimr/vim-jsbeautify', {'for': 'javascript'}
 Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
 Plug 'gkz/vim-ls', {'for': 'ls'}
 Plug 'digitaltoad/vim-jade', {'for': 'jade'}
+Plug 'elzr/vim-json', {'for': ['json', 'cson']}
 
 " CSS
 Plug 'ap/vim-css-color'

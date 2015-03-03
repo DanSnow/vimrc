@@ -95,7 +95,6 @@ au BufRead,BufNewFile *.json setf json
 
 " comment
 map <Leader><Leader> <Leader>c<space>
-map <F1> :UndotreeToggle<CR>
 
 execute "set colorcolumn=" . join(range(161,335), ',')
 
@@ -146,6 +145,11 @@ map <silent> <A-Up> <C-w>+
 map <silent> <A-Down> <C-w>-
 map <silent> <A-Left> <C-w><
 map <silent> <A-Right> <C-w>>
+
+map <silent> <C-S-Up> :m .-2<Cr>==
+map <silent> <C-S-Down> :m .+1<Cr>==
+inoremap <silent> <C-S-Up> <Esc>:m .-2<Cr>==gi
+inoremap <silent> <C-S-Down> <Esc>:m .+1<Cr>==gi
 
 " auto reload after save .vimrc
 au! bufwritepost .vimrc source %

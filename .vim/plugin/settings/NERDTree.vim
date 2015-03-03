@@ -21,14 +21,14 @@ endfunction
 "
 " " autocmd BufEnter * silent! if bufname('%') !~# 'NERD_tree_' | cd %:p:h | NERDTreeCWD | wincmd p | endif
 
-nnoremap <silent> <F2> :call OpenNerd()<CR>
+" nnoremap <silent> <F2> :call OpenNerd()<CR>
 let NERDTreeShowBookmarks=0
 let NERDTreeChDirMode=2
 let NERDTreeMouseMode=2
 let g:nerdtree_tabs_focus_on_files=1
 let g:nerdtree_tabs_open_on_gui_startup=0
 " open directory of current opened file
-map <leader>r :NERDTreeFind<cr>
+" map <leader>r :NERDTreeFind<cr>
 
 " make nerdtree look nice
 let NERDTreeMinimalUI=1

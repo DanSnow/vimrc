@@ -7,7 +7,7 @@ function! PresentationModeOn()
   if has("gui_macvim")
     set guifont=Monaco:h25           " for Mac
   elseif has("gui_gtk")
-    set guifont=Inconsolata\ 22        " for ubuntu
+    set guifont=Larabiefont\ 22 " Inconsolata
   end
 endfunction
 
@@ -15,7 +15,7 @@ function! PresentationModeOff()
   if has("gui_macvim")
     set guifont=Monaco:h17           " for Mac
   elseif has("gui_gtk")
-    set guifont=Inconsolata\ 11        " for ubuntu
+    set guifont=Larabiefont\ 10 " Inconsolata
   end
 endfunction
 
