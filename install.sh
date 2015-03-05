@@ -15,17 +15,26 @@ prompt_yn() {
   return false
 }
 
+ask_path() {
+  read -p "$1" -e -i '~' path
+  if [[ -z path ]]; then
+    path="$HOME"
+  fi
+}
+
 git 1> /dev/null 2>&1
 if [ $? -eq 127 ]; then
   echo 'git not found. abort'
   exit 1
 fi
 
+ask_path 'Please input install directory: '
+
 if prompt_yn "Do you want to remove old files?"; then
-  rm -rf ~/.vim ~/.vimrc ~/.gvimrc
+  rm -rf "$path/.vimrc" "$path/.vim"  "$path/.gvimrc"
 fi
 
-cp -rf .vim .vimrc .gvimrc ~
+cp -rf .vim .vimrc .gvimrc "$path"
 echo "Now install plugin"
 vim +PlugInstall +quit
 echo done
