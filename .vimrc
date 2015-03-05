@@ -6,11 +6,14 @@ call plug#begin("~/.vim/bundle")
 " Interface
 Plug 'bling/vim-airline'
 
-" Unite ( utility finder )
+" Navigation
+Plug 'a.vim'
+Plug 'Shougo/vimfiler.vim'
+Plug 'majutsushi/tagbar'
 Plug 'Shougo/unite.vim'
-Plug 'osyo-manga/unite-filetype'
-Plug 'basyura/unite-rails'
-Plug 'ujihisa/unite-rake'
+  Plug 'osyo-manga/unite-filetype'
+  Plug 'basyura/unite-rails'
+  Plug 'ujihisa/unite-rake'
 
 " Motion
 Plug 'CamelCaseMotion'
@@ -19,15 +22,12 @@ Plug 'CamelCaseMotion'
 Plug 'syntastic'
 
 " Completion
+Plug 'Shougo/neocomplete.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-endwise'
 Plug 'mattn/emmet-vim'
 
-" Navigation
-Plug 'a.vim'
-Plug 'Shougo/vimfiler.vim'
-Plug 'majutsushi/tagbar'
 
 Plug 'tpope/vim-fugitive'
 Plug 'Shougo/vimproc.vim'
