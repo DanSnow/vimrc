@@ -10,11 +10,12 @@ This is my vimrc. It contain some awesome plugin, and user friendly setting.
 
 # Installation #
 
-You will need Internet connect.
-Under terminal type:
 ```shell
-vim +PluginInstall +qall
+$ git clone https://github.com/DanSnow/Vimrc.git
+$ cd Vimrc
+$ ./install.sh
 ```
+
 This will take amount time to install plugin.
 It will have some of error at first. Just ignore it.
 After finish you can start use your vim.
@@ -26,8 +27,8 @@ These are my custom or common using key mapping. For plugin key mapping, you sho
 \<leader\>: ,
 
 Normal mode:
-- \<F1\>: Toggle UndoTree
-- \<F2\>: Toggle NERDTree
+- \<F1\>: Toggle Gundo
+- \<F2\>: Toggle VimFiler
 - \<F3\>: Toggle Tagbar
 - \<F4\>: Toggle highlight search
 - \<F5\>: Toggle QuickFix
@@ -53,8 +54,8 @@ Normal mode:
 - gcc: Toggle current comment(By tComment)
 
 Visual mode:
-- \<Tab\>: Increase select line indent
-- \<S-Tab\>: Decrease select line indent
+- \<C-Right\>: Increase select line indent
+- \<C-Left\>: Decrease select line indent
 
 # Plugin #
 I admit the amount of plugin cause performance problem. But it useful, maybe.
