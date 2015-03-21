@@ -36,5 +36,5 @@ fi
 
 cp -rf .vim .vimrc .gvimrc "$path"
 echo "Now install plugin"
-vim +PlugInstall +quit
+vim +PlugInstall +qall
 echo done
