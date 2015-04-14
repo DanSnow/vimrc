@@ -86,7 +86,7 @@ syntax enable
 "  custom key and plugin configurations
 " ======================================
 " remove tailing whitespace
-autocmd BufWritePre * :%s/\s\+$//e
+" autocmd BufWritePre * :%s/\s\+$//e
 
 autocmd FileType python set sw=2
 
@@ -114,8 +114,8 @@ map <leader>gf :e <cfile><cr>
 " identation
 nmap <TAB> v>
 nmap <S-TAB> v<
-vmap <TAB> >gv
-vmap <S-TAB> <gv
+vmap <C-Right> >gv
+vmap <C-Left> <gv
 
 " remap VIM 0
 map 0 ^

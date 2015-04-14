@@ -2,6 +2,7 @@
 ###########################################################################
 #                            TextMate Snippets                            #
 ###########################################################################
+
 snippet def "#ifndef ... #define ... #endif"
 #define ${1:SYMBOL} ${2:value}
 endsnippet
@@ -59,10 +60,10 @@ void ${2:test_name}(void **state) {
 }
 
 int main(int argc, char *argv[]) {
-	UnitTest unitTest[] = {
-		unit_test($2)
+	const struct CMUnitTest unitTest[] = {
+		cmocka_unit_test($2)
 	};
-	return run_tests(unitTest);
+	return cmocka_run_group_tests(unitTest, NULL, NULL);
 }
 endsnippet
 

@@ -29,10 +29,10 @@ require 'thread'
 require 'Qt'
 
 class ${1:ClassName} < Qt::${2:Dialog}
-  def initialize(parent = nil)
-    super(parent)
-    $0
-  end
+	def initialize(parent = nil)
+		super(parent)
+		$0
+	end
 end
 endsnippet
 
@@ -53,6 +53,12 @@ endsnippet
 snippet if "if <condition> ... end"
 if ${1:condition}
 	${2:# TODO}
+end
+endsnippet
+
+snippet ifmain "if __FILE__ == $0" !b
+if __FILE__ == \$0
+	${0:main}
 end
 endsnippet
 
@@ -112,7 +118,7 @@ endsnippet
 
 snippet "\b(de)?f" "def <name>..." r
 def ${1:function_name}(${2:*args})
-	${0:# TODO}
+	${0:${VISUAL:# TODO}}
 end
 endsnippet
 
@@ -580,6 +586,12 @@ endsnippet
 
 snippet module "module"
 module ${1:module_name}
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet extself "class << self" !b
+class << self
 	${0:${VISUAL}}
 end
 endsnippet
