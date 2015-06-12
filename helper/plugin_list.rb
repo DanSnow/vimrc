@@ -19,10 +19,10 @@ plugin_list.each do |line|
     idx = line.index '/'
     if idx
       url = "https://github.com/#{m[1]}"
-      puts "[#{m[1].sub(%r{^.*/}, '')}](#{url})"
+      puts "- [#{m[1].sub(%r{^.*/}, '')}](#{url})"
     else
       url = "https://github.com/vim-scripts/#{m[1]}"
-      puts "[#{m[1]}](#{url})"
+      puts "- [#{m[1]}](#{url})"
     end
   end
 end
