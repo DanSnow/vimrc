@@ -1,4 +1,4 @@
-snippet make "Make file basic"
+snippet c "Make file basic"
 CC= gcc
 CCFLAGS=
 INCLUDE= -I.
@@ -13,6 +13,58 @@ rebuild: clean all
 
 %.o: %.c
 	$(CC) $(CCFLAGS) -c $< $(INCLUDE) -o $@
+
+endsnippet
+
+snippet gtest "GTest test" !b
+CXX= g++
+CXXFLAGS= -Wall -Wextra -Werror -pthread
+INCLUDE= -I.
+LIB= -lgtest -lgtest_main -lpthread
+Target=$(shell ls *.cpp | sed 's/\.cpp$/.o/')
+
+all: compile test
+
+compile: unit_test
+
+unit_test: $(Target)
+	$(CC) -o $@ $(Target) $(LIB)
+
+$(Target): $(Target:.o=.cpp)
+
+clean:
+	@rm -f *.o unit_test
+
+rebuild: clean compile test
+
+.cpp.o:
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+.PHONY: all compile clean test rebuild
+
+endsnippet
+
+snippet cpp "cpp build" !b
+CXX= g++
+CXXFLAGS= -Wall -Wextra -Werror
+INCLUDE= -I.
+Target= ${1}
+
+all: compile
+
+compile: $(Target)
+
+$(Target): $(Target:.o=.cpp)
+
+clean:
+	@rm -f *.o
+
+rebuild: clean all
+
+.cpp.o:
+	$(CC) $(CCFLAGS) -c $< -o $@
+
+.PHONY: all compile clean rebuild
 
 endsnippet
 
@@ -49,6 +101,17 @@ C_FLAGS = -Wall -Werror
 INCLUDES =  # TODO(ziv): eg. -I include
 LIBS =  # TODO(ziv): eg. -L lib
 LINK_FLAGS =  # TODO(ziv): eg. -l lxxx
+endsnippet
+
+snippet g++ "g++ configures"
+CXX = g++
+CXXFLAGS = -Wall -Werror
+INCLUDES =  ${1}
+LIBS =  ${2}
+endsnippet
+
+snippet .ph ".PHONY"
+.PHONY: ${1}
 endsnippet
 
 snippet cpsrc ".cpp sources"

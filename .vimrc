@@ -34,7 +34,14 @@ Plug 'Shougo/vimproc.vim'
 Plug 'Shougo/vimshell.vim'
 Plug 'tpope/vim-eunuch'
 
+" Diff
+Plug 'chrisbra/vim-diff-enhanced'
+
+" Input method
+Plug 'fcitx.vim'
+
 " Utility
+Plug 'kshenoy/vim-signature'
 Plug 'SingleCompile'
 Plug 'tmhedberg/matchit'
 Plug 'Yggdroot/indentLine'
@@ -47,6 +54,11 @@ Plug 'tommcdo/vim-exchange'
 Plug 'godlygeek/tabular'
 Plug 'sjl/gundo.vim'
 Plug 'powerman/vim-plugin-viewdoc'
+Plug 'dhruvasagar/vim-dotoo'
+
+" Color Scheme
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'tomasr/molokai'
 
 " Highlight & Language support
 
@@ -54,19 +66,19 @@ Plug 'DanSnow/Block.vim'
 Plug 'Chiel92/vim-autoformat'
 
 " Test
-Plug 'janko-m/vim-test'
+" Plug 'janko-m/vim-test'
 Plug 'tpope/vim-dispatch'
 
 " Ruby
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', {'for': 'ruby'}
 Plug 'ngmy/vim-rubocop', {'for': 'ruby'}
-" Plug 't9md/vim-ruby-xmpfilter', {'for': 'ruby'}
 
 " C/C++
 Plug 'c.vim', {'for': ['c', 'cpp']}
 Plug 'cSyntaxAfter', {'for': ['c', 'cpp']}
 Plug 'gtk-vim-syntax', {'for': ['c', 'cpp']}
+Plug 'octol/vim-cpp-enhanced-highlight', {'for': ['cpp']}
 " Plug 'Qt.vim', {'for': 'cpp'}
 " Plug 'peterhoeg/vim-qml'
 Plug 'ciaranm/googletest-syntax', {'for': 'cpp'}
@@ -76,11 +88,14 @@ Plug 'justinmk/vim-syntax-extra'
 " Html
 Plug 'othree/html5.vim', {'for': 'html'}
 Plug 'gregsexton/MatchTag', {'for': 'html'}
-Plug 'tpope/vim-haml', {'for': ['haml', 'scss', 'sass']}
+Plug 'tpope/vim-haml', {'for': ['haml', 'sass']}
 Plug 'slim-template/vim-slim', {'for': 'slim'}
+Plug 'cakebaker/scss-syntax.vim', {'for': ['scss']}
 
 " JS
-Plug 'pangloss/vim-javascript', {'for': 'javascript'}
+" Plug 'pangloss/vim-javascript', {'for': 'javascript'}
+Plug 'othree/yajs.vim', {'for': 'javascript'}
+Plug 'othree/javascript-libraries-syntax.vim', {'for': ['javascript', 'coffee', 'ls']}
 " Plug 'maksimr/vim-jsbeautify', {'for': 'javascript'}
 Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
 Plug 'gkz/vim-ls', {'for': 'ls'}
@@ -90,7 +105,6 @@ Plug 'elzr/vim-json', {'for': ['json', 'cson']}
 " CSS
 Plug 'ap/vim-css-color'
 Plug 'hail2u/vim-css3-syntax'
-Plug 'rstacruz/vim-ultisnips-css'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'wavded/vim-stylus', {'for': 'stylus'}
 

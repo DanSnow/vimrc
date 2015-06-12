@@ -1,6 +1,7 @@
 let do_syntax_sel_menu = 1
 runtime! synmenu.vim
 aunmenu &Syntax.&Show\ filetypes\ in\ menu
+" set guifont=Input\ 11
 set guifont=Larabiefont\ 10 " Inconsolata
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar

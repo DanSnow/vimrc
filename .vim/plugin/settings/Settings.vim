@@ -135,7 +135,7 @@ highlight Pmenu ctermfg=white  ctermbg=gray
 highlight PmenuSel ctermfg=white  ctermbg=blue
 
 " select ALL
-map <C-A> ggVG
+" map <C-A> ggVG
 
 map <F4> :set hls!<BAR>set hls?<CR>
 
@@ -155,5 +155,5 @@ inoremap <silent> <C-S-Down> <Esc>:m .+1<Cr>==gi
 au! bufwritepost .vimrc source %
 
 "auto change work dir
-autocmd BufEnter * lcd %:p:h
+autocmd BufEnter * silent! lcd %:p:h
 
