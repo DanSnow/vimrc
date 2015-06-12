@@ -11,11 +11,11 @@ plugin_list = plugin_list.take(index)
 plugin_list.reject! { |line| line =~ /^$/ }
 
 plugin_list.each do |line|
-  if m = line.match(/"\s(.*)/)
+  if (m = line.match(/"\s(.*)/))
     next if line.match(/"\s+Plug.*/)
     puts
     puts "## #{m[1]} ##"
-  elsif m = line.match(/^\s*Plug\s+'(.*?)'(?:$|,.*)/)
+  elsif (m = line.match(/^\s*Plug\s+'(.*?)'(?:$|,.*)/))
     idx = line.index '/'
     if idx
       url = "https://github.com/#{m[1]}"
