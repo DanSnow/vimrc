@@ -23,6 +23,7 @@ Plug 'syntastic'
 
 " Completion
 Plug 'Shougo/neocomplete.vim'
+Plug 'Shougo/neocomplcache-rsense.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-endwise'
@@ -120,8 +121,9 @@ Plug 'tfnico/vim-gradle'
 Plug 'keithbsmiley/rspec.vim'
 
 " Other
+Plug 'rhysd/vim-crystal'
 Plug 'derekwyatt/vim-scala'
-Plug 'xsbeats/vim-blade'
+Plug 'DanSnow/vim-blade'
 Plug 'plasticboy/vim-markdown'
 Plug 'fatih/vim-go'
 Plug 'Shougo/vinarise.vim', {'on': 'Vinarise'}

@@ -76,8 +76,8 @@ catch ${2:error}
 	$3
 endsnippet
 
-snippet req "Require" b
-${1/^'?(\w+)'?$/\L$1\E/} = require(${1:'${2:sys}'})
+snippet req "Require"
+require '${1}'
 endsnippet
 
 snippet # "Interpolated Code"
