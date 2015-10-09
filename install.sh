@@ -28,11 +28,12 @@ if [ $? -eq 127 ]; then
   exit 1
 fi
 
-ask_path 'Please input install directory: '
 
-if prompt_yn "Do you want to remove old files?"; then
-  rm -rf "$path/.vimrc" "$path/.vim"  "$path/.gvimrc"
-fi
+# ask_path 'Please input install directory: '
+#
+# if prompt_yn "Do you want to remove old files?"; then
+#   rm -rf "$path/.vimrc" "$path/.vim"  "$path/.gvimrc"
+# fi
 
 cp -rf .vim .vimrc .gvimrc "$path"
 echo "Now install plugin"
