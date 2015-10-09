@@ -22,8 +22,8 @@ Plug 'CamelCaseMotion'
 Plug 'syntastic'
 
 " Completion
-Plug 'Shougo/neocomplete.vim'
-Plug 'Shougo/neocomplcache-rsense.vim'
+" Plug 'Shougo/neocomplete.vim'
+" Plug 'Shougo/neocomplcache-rsense.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-endwise'
@@ -31,7 +31,7 @@ Plug 'mattn/emmet-vim'
 
 
 Plug 'tpope/vim-fugitive'
-Plug 'Shougo/vimproc.vim'
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'Shougo/vimshell.vim'
 Plug 'tpope/vim-eunuch'
 
@@ -44,10 +44,11 @@ Plug 'fcitx.vim'
 " Utility
 Plug 'kshenoy/vim-signature'
 Plug 'SingleCompile'
-Plug 'tmhedberg/matchit'
+" Plug 'tmhedberg/matchit'
 Plug 'Yggdroot/indentLine'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-abolish'
 Plug 'tComment'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat'
@@ -96,10 +97,10 @@ Plug 'cakebaker/scss-syntax.vim', {'for': ['scss']}
 " JS
 " Plug 'pangloss/vim-javascript', {'for': 'javascript'}
 Plug 'othree/yajs.vim', {'for': 'javascript'}
-Plug 'othree/javascript-libraries-syntax.vim', {'for': ['javascript', 'coffee', 'ls']}
 " Plug 'maksimr/vim-jsbeautify', {'for': 'javascript'}
 Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
 Plug 'gkz/vim-ls', {'for': 'ls'}
+Plug 'othree/javascript-libraries-syntax.vim', {'for': ['javascript', 'coffee', 'ls']}
 Plug 'digitaltoad/vim-jade', {'for': 'jade'}
 Plug 'elzr/vim-json', {'for': ['json', 'cson']}
 
@@ -121,6 +122,7 @@ Plug 'tfnico/vim-gradle'
 Plug 'keithbsmiley/rspec.vim'
 
 " Other
+Plug 'mips.vim'
 Plug 'rhysd/vim-crystal'
 Plug 'derekwyatt/vim-scala'
 Plug 'DanSnow/vim-blade'
