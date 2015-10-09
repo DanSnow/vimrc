@@ -1,7 +1,7 @@
 #!/bin/bash
 
 prompt_yn() {
-  echo $1
+  echo "$1"
   select yn in "Yes" "No"; do
     case $yn in
       Yes)
@@ -28,6 +28,7 @@ if [ $? -eq 127 ]; then
   exit 1
 fi
 
+path="$HOME"
 
 # ask_path 'Please input install directory: '
 #
@@ -38,4 +39,4 @@ fi
 cp -rf .vim .vimrc .gvimrc "$path"
 echo "Now install plugin"
 vim +PlugInstall +qall
-echo done
+echo 'done'
