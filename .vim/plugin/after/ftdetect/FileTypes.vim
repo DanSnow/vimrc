@@ -1,13 +1,6 @@
 " Objective-C
 autocmd! BufNewFile,BufRead *.m set filetype=objc
 
-" ActionScript
-autocmd! BufNewFile,BufRead *.as set filetype=actionscript
-autocmd! BufNewFile,BufRead *.mxml set filetype=mxml
-
-" eRuby
-autocmd! BufNewFile,BufRead *.erb set filetype=eruby.html
-
 " GitIgnore
 autocmd! BufNewFile,BufRead *.gitignore set filetype=gitignore
 
@@ -16,6 +9,3 @@ autocmd! BufNewFile,BufRead *.zsh-theme set filetype=zsh
 
 " Nginx Config
 autocmd! BufNewFile,BufRead nginx.conf set filetype=nginx
-
-" CocoaPods
-autocmd! BufNewFile,BufRead Podfile,*.podspec set filetype=ruby
