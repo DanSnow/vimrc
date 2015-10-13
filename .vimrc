@@ -20,6 +20,7 @@ Plug 'CamelCaseMotion'
 
 " Syntax Check
 Plug 'syntastic'
+Plug 'dbakker/vim-lint'
 
 " Completion
 " Plug 'Shougo/neocomplete.vim'
@@ -81,6 +82,7 @@ Plug 'c.vim', {'for': ['c', 'cpp']}
 Plug 'cSyntaxAfter', {'for': ['c', 'cpp']}
 Plug 'gtk-vim-syntax', {'for': ['c', 'cpp']}
 Plug 'octol/vim-cpp-enhanced-highlight', {'for': ['cpp']}
+Plug 'DanSnow/cmocka.vim', {'for': 'c'}
 " Plug 'Qt.vim', {'for': 'cpp'}
 " Plug 'peterhoeg/vim-qml'
 Plug 'ciaranm/googletest-syntax', {'for': 'cpp'}
@@ -92,14 +94,13 @@ Plug 'othree/html5.vim', {'for': 'html'}
 Plug 'gregsexton/MatchTag', {'for': 'html'}
 Plug 'tpope/vim-haml', {'for': ['haml', 'sass']}
 Plug 'slim-template/vim-slim', {'for': 'slim'}
-Plug 'cakebaker/scss-syntax.vim', {'for': ['scss']}
 
 " JS
 " Plug 'pangloss/vim-javascript', {'for': 'javascript'}
 Plug 'othree/yajs.vim', {'for': 'javascript'}
 " Plug 'maksimr/vim-jsbeautify', {'for': 'javascript'}
 Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
-Plug 'gkz/vim-ls', {'for': 'ls'}
+" Plug 'gkz/vim-ls', {'for': 'ls'}
 Plug 'othree/javascript-libraries-syntax.vim', {'for': ['javascript', 'coffee', 'ls']}
 Plug 'digitaltoad/vim-jade', {'for': 'jade'}
 Plug 'elzr/vim-json', {'for': ['json', 'cson']}
@@ -107,8 +108,8 @@ Plug 'elzr/vim-json', {'for': ['json', 'cson']}
 " CSS
 Plug 'ap/vim-css-color'
 Plug 'hail2u/vim-css3-syntax'
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'wavded/vim-stylus', {'for': 'stylus'}
+Plug 'cakebaker/scss-syntax.vim', {'for': 'scss'}
+" Plug 'wavded/vim-stylus', {'for': 'stylus'}
 
 " Python
 Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
@@ -123,12 +124,13 @@ Plug 'keithbsmiley/rspec.vim'
 
 " Other
 Plug 'mips.vim'
-Plug 'rhysd/vim-crystal'
+Plug 'DanSnow/vim-mips-snippet'
+" Plug 'rhysd/vim-crystal'
 Plug 'derekwyatt/vim-scala'
 Plug 'DanSnow/vim-blade'
 Plug 'plasticboy/vim-markdown'
 Plug 'fatih/vim-go'
 Plug 'Shougo/vinarise.vim', {'on': 'Vinarise'}
-Plug 'chrisbra/csv.vim'
+" Plug 'chrisbra/csv.vim'
 Plug 'nginx.vim'
 call plug#end()
