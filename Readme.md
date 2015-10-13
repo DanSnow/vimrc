@@ -11,8 +11,8 @@ This is my vimrc. It contain some awesome plugin, and user friendly setting.
 # Installation #
 
 ```shell
-$ git clone https://github.com/DanSnow/Vimrc.git
-$ cd Vimrc
+$ git clone https://github.com/DanSnow/vimrc.git
+$ cd vimrc
 $ ./install.sh
 ```
 
@@ -32,7 +32,7 @@ Normal mode:
 - \<F3\>: Toggle Tagbar
 - \<F4\>: Toggle highlight search
 - \<F5\>: Toggle QuickFix
-- \<F6\>: Format code(Require astyle, nodejs. Only for C, C++, Java, Html, CSS, JavaScript)
+- \<F6\>: Format code(Require astyle, nodejs. Support by AutoFormat)
 - \<F7\>: Previous tab
 - \<F8\>: Next tab
 - \<F9\>: Compile or run (By SingleCompile)
@@ -84,7 +84,6 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [syntastic](https://github.com/vim-scripts/syntastic)
 
 ## Completion ##
-- [neocomplete.vim](https://github.com/Shougo/neocomplete.vim)
 - [delimitMate](https://github.com/Raimondi/delimitMate)
 - [ultisnips](https://github.com/SirVer/ultisnips)
 - [vim-endwise](https://github.com/tpope/vim-endwise)
@@ -138,6 +137,7 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [gtk-vim-syntax](https://github.com/vim-scripts/gtk-vim-syntax)
 - [vim-cpp-enhanced-highlight](https://github.com/octol/vim-cpp-enhanced-highlight)
 - [googletest-syntax](https://github.com/ciaranm/googletest-syntax)
+- [cmocka.vim](https://github.com/DanSnow/cmocka.vim)
 - [SWIG-syntax](https://github.com/vim-scripts/SWIG-syntax)
 - [vim-syntax-extra](https://github.com/justinmk/vim-syntax-extra)
 
