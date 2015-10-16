@@ -1,12 +1,15 @@
-let s:strip_black_list = ['mkd']
-
+let s:strip_black_list = ['mkd', 'markdown']
 
 fun! StripTrailingWhitespace()
-    " Don't strip on these filetypes
-    if index(s:strip_black_list, &ft) >= 0
-        return
+  let current_filetype = &filetype
+  let filetypes = split(current_filetype, '\.')
+  " Don't strip on these filetypes
+  for type in filetypes
+    if index(s:strip_black_list, type) >= 0
+      return
     endif
-    %s/\s\+$//e
+  endfor
+  %s/\s\+$//e
 endfun
 
-autocmd BufWritePre * call StripTrailingWhitespace()
+au! BufWritePre * call StripTrailingWhitespace()

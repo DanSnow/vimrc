@@ -77,11 +77,11 @@ filetype on                           " enable filetype detection
 filetype indent on                    " enable filetype-specific indenting
 filetype plugin on                    " enable filetype-specific plugins
 
-let mapleader=','
-let g:mapleader=','
-
 syntax on                             " syntax highlight
 syntax enable
+
+let mapleader=','
+let g:mapleader=','
 
 " ======================================
 "  custom key and plugin configurations
@@ -91,12 +91,7 @@ syntax enable
 
 autocmd FileType python set sw=2
 
-" let sourse beautiful sopport json
-au BufRead,BufNewFile *.json setf json
-
-" comment
-map <Leader><Leader> <Leader>c<space>
-
+" Add width bound
 execute "set colorcolumn=" . join(range(161,335), ',')
 
 " next and prev tab
@@ -105,11 +100,11 @@ noremap <F8> gt
 inoremap <F7> <esc>gTa
 inoremap <F8> <esc>gta
 
+" Next and prev buffer
 noremap <leader>p :bp!<cr>
 noremap <leader>n :bn!<cr>
 
-noremap <silent> <leader>a :A<cr>
-
+" Open file under cursor
 map <leader>gf :e <cfile><cr>
 
 " identation
@@ -129,8 +124,7 @@ imap <Home> <C-o>I
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
 
 " quick open vimrc in a new tab
-nmap <leader>v :tabe $MYVIMRC<CR>
-map <leader>0 :topleft 100 :split README.md<CR>
+nmap <leader>v :e $MYVIMRC<CR>
 
 highlight Pmenu ctermfg=white  ctermbg=gray
 highlight PmenuSel ctermfg=white  ctermbg=blue
@@ -153,7 +147,7 @@ inoremap <silent> <C-S-Up> <Esc>:m .-2<Cr>==gi
 inoremap <silent> <C-S-Down> <Esc>:m .+1<Cr>==gi
 
 " auto reload after save .vimrc
-au! bufwritepost .vimrc source %
+au! BufWritePost .vimrc source %
 
 "auto change work dir
 autocmd BufEnter * silent! lcd %:p:h
