@@ -80,9 +80,6 @@ filetype plugin on                    " enable filetype-specific plugins
 syntax on                             " syntax highlight
 syntax enable
 
-let mapleader=','
-let g:mapleader=','
-
 " ======================================
 "  custom key and plugin configurations
 " ======================================

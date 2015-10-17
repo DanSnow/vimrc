@@ -1,6 +1,10 @@
 set encoding=utf-8
 set fileencodings=utf-8,cp950
 
+" These setting will affect others
+let mapleader=','
+let g:mapleader=','
+
 call plug#begin("~/.vim/bundle")
 
 " Interface
