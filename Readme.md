@@ -68,11 +68,6 @@ Visual mode:
 
 # Plugin #
 I admit the amount of plugin cause performance problem. But it useful, maybe.
-## Plugin Manager ##
-- [Vim-Plug](https://github.com/junegunn/vim-plug)
-
-**Note: ** This manager seem faster but ruby support is needed.
-
 
 ## Interface ##
 - [vim-airline](https://github.com/bling/vim-airline)
@@ -91,12 +86,15 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 
 ## Syntax Check ##
 - [syntastic](https://github.com/vim-scripts/syntastic)
+- [vim-lint](https://github.com/dbakker/vim-lint)
 
 ## Completion ##
 - [delimitMate](https://github.com/Raimondi/delimitMate)
 - [ultisnips](https://github.com/SirVer/ultisnips)
 - [vim-endwise](https://github.com/tpope/vim-endwise)
 - [emmet-vim](https://github.com/mattn/emmet-vim)
+
+## Integration ##
 - [vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [vimproc.vim](https://github.com/Shougo/vimproc.vim)
 - [vimshell.vim](https://github.com/Shougo/vimshell.vim)
@@ -111,10 +109,10 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 ## Utility ##
 - [vim-signature](https://github.com/kshenoy/vim-signature)
 - [SingleCompile](https://github.com/vim-scripts/SingleCompile)
-- [matchit](https://github.com/tmhedberg/matchit)
 - [indentLine](https://github.com/Yggdroot/indentLine)
 - [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
 - [vim-surround](https://github.com/tpope/vim-surround)
+- [vim-abolish](https://github.com/tpope/vim-abolish)
 - [tComment](https://github.com/vim-scripts/tComment)
 - [vim-unimpaired](https://github.com/tpope/vim-unimpaired)
 - [vim-repeat](https://github.com/tpope/vim-repeat)
@@ -135,59 +133,56 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 ## Test ##
 - [vim-dispatch](https://github.com/tpope/vim-dispatch)
 
-## Ruby ##
+### Ruby ###
 - [vim-ruby](https://github.com/vim-ruby/vim-ruby)
 - [vim-rails](https://github.com/tpope/vim-rails)
 - [vim-rubocop](https://github.com/ngmy/vim-rubocop)
 
-## C/C++ ##
+### C/C++ ###
 - [c.vim](https://github.com/vim-scripts/c.vim)
 - [cSyntaxAfter](https://github.com/vim-scripts/cSyntaxAfter)
 - [gtk-vim-syntax](https://github.com/vim-scripts/gtk-vim-syntax)
 - [vim-cpp-enhanced-highlight](https://github.com/octol/vim-cpp-enhanced-highlight)
-- [googletest-syntax](https://github.com/ciaranm/googletest-syntax)
 - [cmocka.vim](https://github.com/DanSnow/cmocka.vim)
+- [googletest-syntax](https://github.com/ciaranm/googletest-syntax)
 - [SWIG-syntax](https://github.com/vim-scripts/SWIG-syntax)
 - [vim-syntax-extra](https://github.com/justinmk/vim-syntax-extra)
 
-## Html ##
+### Html ###
 - [html5.vim](https://github.com/othree/html5.vim)
 - [MatchTag](https://github.com/gregsexton/MatchTag)
 - [vim-haml](https://github.com/tpope/vim-haml)
 - [vim-slim](https://github.com/slim-template/vim-slim)
-- [scss-syntax.vim](https://github.com/cakebaker/scss-syntax.vim)
 
-## JS ##
+### JS ###
 - [yajs.vim](https://github.com/othree/yajs.vim)
-- [javascript-libraries-syntax.vim](https://github.com/othree/javascript-libraries-syntax.vim)
 - [vim-coffee-script](https://github.com/kchmck/vim-coffee-script)
-- [vim-ls](https://github.com/gkz/vim-ls)
+- [javascript-libraries-syntax.vim](https://github.com/othree/javascript-libraries-syntax.vim)
 - [vim-jade](https://github.com/digitaltoad/vim-jade)
 - [vim-json](https://github.com/elzr/vim-json)
 
-## CSS ##
+### CSS ###
 - [vim-css-color](https://github.com/ap/vim-css-color)
 - [vim-css3-syntax](https://github.com/hail2u/vim-css3-syntax)
 - [scss-syntax.vim](https://github.com/cakebaker/scss-syntax.vim)
-- [vim-stylus](https://github.com/wavded/vim-stylus)
 
-## Python ##
+### Python ###
 - [vim-python-pep8-indent](https://github.com/hynek/vim-python-pep8-indent)
 - [Pretty-Vim-Python](https://github.com/sentientmachine/Pretty-Vim-Python)
 
-## Tools ##
+### Tools ###
 - [scons.vim](https://github.com/vim-scripts/scons.vim)
 - [vim-rake](https://github.com/tpope/vim-rake)
 - [vim-bundler](https://github.com/tpope/vim-bundler)
 - [vim-gradle](https://github.com/tfnico/vim-gradle)
 - [rspec.vim](https://github.com/keithbsmiley/rspec.vim)
 
-## Other ##
+### Other ###
+- [mips.vim](https://github.com/vim-scripts/mips.vim)
+- [vim-mips-snippet](https://github.com/DanSnow/vim-mips-snippet)
 - [vim-scala](https://github.com/derekwyatt/vim-scala)
-- [vim-blade](https://github.com/xsbeats/vim-blade)
+- [vim-blade](https://github.com/DanSnow/vim-blade)
 - [vim-markdown](https://github.com/plasticboy/vim-markdown)
 - [vim-go](https://github.com/fatih/vim-go)
 - [vinarise.vim](https://github.com/Shougo/vinarise.vim)
-- [csv.vim](https://github.com/chrisbra/csv.vim)
 - [nginx.vim](https://github.com/vim-scripts/nginx.vim)
-
