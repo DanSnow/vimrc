@@ -1,1 +1,1 @@
-let g:plug_window = 'tabnew'
+let g:plug_window = 'topleft vnew'

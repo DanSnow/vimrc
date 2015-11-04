@@ -113,10 +113,12 @@ vmap <C-Left> <gv
 " remap VIM 0
 map 0 ^
 
-imap <C-a> <C-o>I
-imap <C-e> <C-o>A
-imap <Home> <C-o>I
+inoremap \<Plug>MoveToHome :normal I<CR>
+inoremap \<Plug>MoveToEnd :normal A<CR>
 
+imap <silent> <C-a> <C-o>I
+imap <silent> <C-e> <C-o>A
+imap <silent> <Home> <C-o>I
 " return current opened file's dirctory
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
 
