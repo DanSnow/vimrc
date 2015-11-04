@@ -5,7 +5,7 @@ set fileencodings=utf-8,cp950
 let mapleader=','
 let g:mapleader=','
 
-call plug#begin("~/.vim/bundle")
+call plug#begin("~/.vim/plugged")
 
 "" Interface
 Plug 'bling/vim-airline'
@@ -18,21 +18,20 @@ Plug 'Shougo/unite.vim'
   Plug 'osyo-manga/unite-filetype'
   Plug 'basyura/unite-rails'
   Plug 'ujihisa/unite-rake'
+  Plug 'Shougo/unite-outline'
 
 "" Motion
 Plug 'CamelCaseMotion'
 
 "" Syntax Check
 Plug 'syntastic'
-Plug 'dbakker/vim-lint'
 
 "" Completion
-" Plug 'Shougo/neocomplete.vim'
-" Plug 'Shougo/neocomplcache-rsense.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-endwise'
 Plug 'mattn/emmet-vim'
+
 
 "" Integration
 Plug 'tpope/vim-fugitive'
@@ -49,7 +48,6 @@ Plug 'fcitx.vim'
 "" Utility
 Plug 'kshenoy/vim-signature'
 Plug 'SingleCompile'
-" Plug 'tmhedberg/matchit'
 Plug 'Yggdroot/indentLine'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
@@ -72,8 +70,7 @@ Plug 'tomasr/molokai'
 Plug 'DanSnow/Block.vim'
 Plug 'Chiel92/vim-autoformat'
 
-"" Test
-" Plug 'janko-m/vim-test'
+""" Test
 Plug 'tpope/vim-dispatch'
 
 """ Ruby
@@ -87,10 +84,7 @@ Plug 'cSyntaxAfter', {'for': ['c', 'cpp']}
 Plug 'gtk-vim-syntax', {'for': ['c', 'cpp']}
 Plug 'octol/vim-cpp-enhanced-highlight', {'for': ['cpp']}
 Plug 'DanSnow/cmocka.vim', {'for': 'c'}
-" Plug 'Qt.vim', {'for': 'cpp'}
-" Plug 'peterhoeg/vim-qml'
 Plug 'ciaranm/googletest-syntax', {'for': 'cpp'}
-Plug 'SWIG-syntax'
 Plug 'justinmk/vim-syntax-extra'
 
 """ Html
@@ -100,11 +94,8 @@ Plug 'tpope/vim-haml', {'for': ['haml', 'sass']}
 Plug 'slim-template/vim-slim', {'for': 'slim'}
 
 """ JS
-" Plug 'pangloss/vim-javascript', {'for': 'javascript'}
 Plug 'othree/yajs.vim', {'for': 'javascript'}
-" Plug 'maksimr/vim-jsbeautify', {'for': 'javascript'}
 Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
-" Plug 'gkz/vim-ls', {'for': 'ls'}
 Plug 'othree/javascript-libraries-syntax.vim', {'for': ['javascript', 'coffee', 'ls']}
 Plug 'digitaltoad/vim-jade', {'for': 'jade'}
 Plug 'elzr/vim-json', {'for': ['json', 'cson']}
@@ -113,7 +104,6 @@ Plug 'elzr/vim-json', {'for': ['json', 'cson']}
 Plug 'ap/vim-css-color'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'cakebaker/scss-syntax.vim', {'for': 'scss'}
-" Plug 'wavded/vim-stylus', {'for': 'stylus'}
 
 """ Python
 Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
@@ -128,13 +118,12 @@ Plug 'keithbsmiley/rspec.vim'
 
 """ Other
 Plug 'mips.vim'
+Plug 'elixir-lang/vim-elixir'
 Plug 'DanSnow/vim-mips-snippet'
-" Plug 'rhysd/vim-crystal'
 Plug 'derekwyatt/vim-scala'
 Plug 'DanSnow/vim-blade'
 Plug 'plasticboy/vim-markdown'
 Plug 'fatih/vim-go'
 Plug 'Shougo/vinarise.vim', {'on': 'Vinarise'}
-" Plug 'chrisbra/csv.vim'
 Plug 'nginx.vim'
 call plug#end()

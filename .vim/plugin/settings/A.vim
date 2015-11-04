@@ -1,1 +1,1 @@
-noremap <silent> <leader>a :A<cr>
+noremap <leader>a :A<cr>
