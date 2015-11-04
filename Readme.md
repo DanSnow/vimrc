@@ -9,8 +9,9 @@ This is my vimrc. It contain some awesome plugin, and user friendly setting.
 - [lite version](https://github.com/DanSnow/vimrc/tree/lite)
 - [full version (with vim7.02 support)](https://github.com/DanSnow/vimrc/tree/vim702)
 - [lite version (with vim7.02 support)](https://github.com/DanSnow/vimrc/tree/vim702-lite)
+- [Next](https://github.com/DanSnow/vimrc/tree/next)
 ## Overview ##
-Now have 4 version. Lite version can be a started version. And you can add your favorite support on it.  
+Now have 5 version. Lite version can be a started version. And you can add your favorite support on it.  
 Or maybe you need to use it with vim7.02, you can use the third and forth version.
 
 # Screenshot #
