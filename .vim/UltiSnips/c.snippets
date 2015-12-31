@@ -68,7 +68,7 @@ int main(int argc, char *argv[]) {
 endsnippet
 
 snippet func "function"
-${2:int} ${1:func}(${3:void}) {
+${2:int} ${1:func}(${3}) {
 	$4
 }
 endsnippet
@@ -78,7 +78,7 @@ ${2:int} ${1:func}(${3:void});
 endsnippet
 
 snippet for "for int loop (fori)"
-for(${4:int} ${2:i} = 0; $2 < ${1:count}; ${3:$2++}) {
+for(${4:int} ${2:i} = 0; $2 < ${1:count}; ${3:++$2}) {
 	${0:/* code */}
 }
 endsnippet
