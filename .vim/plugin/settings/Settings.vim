@@ -28,7 +28,9 @@ set switchbuf=useopen
 set showtabline=2                     " always show tab
 set wildmode=longest,list             " use emacs-style tab completion when selecting files, etc
 set wildmenu                          " make tab completion for files/buffers act like bash
-set key=			                        " disable encryption
+if !has('nvim')
+  set key=			                        " disable encryption
+endif
 set completeopt=longest,menuone
 set synmaxcol=160
 set viminfo=			                    " disable .viminfo file
@@ -51,9 +53,11 @@ set hlsearch                          " search highlighting
 set incsearch                         " incremental search
 set noerrorbells
 set t_vb=
-set encoding=utf-8
+if !has('nvim')
+  set encoding=utf-8
+endif
 set fileencodings=ucs-bom,utf-8,big5,euc-jp,gbk,euc-kr,utf-bom,iso8859-1,euc-jp,utf-16le,latin1
-set fenc=utf-8 enc=utf-8 tenc=utf-8
+set fenc=utf-8 tenc=utf-8
 scriptencoding utf-8
 set wildignore+=*.o,*.obj,*.pyc                " output objects
 set wildignore+=*.png,*.jpg,*.gif,*.ico        " image format
