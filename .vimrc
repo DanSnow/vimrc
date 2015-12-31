@@ -38,6 +38,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'Shougo/vimshell.vim'
 Plug 'tpope/vim-eunuch'
+Plug 'editorconfig/editorconfig-vim'
 
 "" Diff
 Plug 'chrisbra/vim-diff-enhanced'
@@ -94,8 +95,10 @@ Plug 'tpope/vim-haml', {'for': ['haml', 'sass']}
 Plug 'slim-template/vim-slim', {'for': 'slim'}
 
 """ JS
-Plug 'othree/yajs.vim', {'for': 'javascript'}
-Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
+Plug 'othree/yajs.vim', {'for': ['javascript', 'jsx']}
+Plug 'mxw/vim-jsx', {'for': ['javascript', 'jsx']}
+Plug 'kchmck/vim-coffee-script', {'for': ['coffee', 'cjsx']}
+Plug 'mtscout6/vim-cjsx', {'for': ['coffee', 'cjsx']}
 Plug 'othree/javascript-libraries-syntax.vim', {'for': ['javascript', 'coffee', 'ls']}
 Plug 'digitaltoad/vim-jade', {'for': 'jade'}
 Plug 'elzr/vim-json', {'for': ['json', 'cson']}
@@ -126,4 +129,6 @@ Plug 'plasticboy/vim-markdown'
 Plug 'fatih/vim-go'
 Plug 'Shougo/vinarise.vim', {'on': 'Vinarise'}
 Plug 'nginx.vim'
+Plug 'tkztmk/vim-vala'
+Plug 'mustache/vim-mustache-handlebars'
 call plug#end()
