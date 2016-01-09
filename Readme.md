@@ -71,6 +71,8 @@ Visual mode:
 # Plugin #
 I admit the amount of plugin cause performance problem. But it useful, maybe.
 
+[comment]: # Inject start
+
 ## Interface ##
 - [vim-airline](https://github.com/bling/vim-airline)
 
@@ -82,13 +84,13 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [unite-filetype](https://github.com/osyo-manga/unite-filetype)
 - [unite-rails](https://github.com/basyura/unite-rails)
 - [unite-rake](https://github.com/ujihisa/unite-rake)
+- [unite-outline](https://github.com/Shougo/unite-outline)
 
 ## Motion ##
 - [CamelCaseMotion](https://github.com/vim-scripts/CamelCaseMotion)
 
 ## Syntax Check ##
 - [syntastic](https://github.com/vim-scripts/syntastic)
-- [vim-lint](https://github.com/dbakker/vim-lint)
 
 ## Completion ##
 - [delimitMate](https://github.com/Raimondi/delimitMate)
@@ -101,6 +103,7 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [vimproc.vim](https://github.com/Shougo/vimproc.vim)
 - [vimshell.vim](https://github.com/Shougo/vimshell.vim)
 - [vim-eunuch](https://github.com/tpope/vim-eunuch)
+- [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim)
 
 ## Diff ##
 - [vim-diff-enhanced](https://github.com/chrisbra/vim-diff-enhanced)
@@ -132,7 +135,7 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [Block.vim](https://github.com/DanSnow/Block.vim)
 - [vim-autoformat](https://github.com/Chiel92/vim-autoformat)
 
-## Test ##
+### Test ###
 - [vim-dispatch](https://github.com/tpope/vim-dispatch)
 
 ### Ruby ###
@@ -147,7 +150,6 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [vim-cpp-enhanced-highlight](https://github.com/octol/vim-cpp-enhanced-highlight)
 - [cmocka.vim](https://github.com/DanSnow/cmocka.vim)
 - [googletest-syntax](https://github.com/ciaranm/googletest-syntax)
-- [SWIG-syntax](https://github.com/vim-scripts/SWIG-syntax)
 - [vim-syntax-extra](https://github.com/justinmk/vim-syntax-extra)
 
 ### Html ###
@@ -158,7 +160,9 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 
 ### JS ###
 - [yajs.vim](https://github.com/othree/yajs.vim)
+- [vim-jsx](https://github.com/mxw/vim-jsx)
 - [vim-coffee-script](https://github.com/kchmck/vim-coffee-script)
+- [vim-cjsx](https://github.com/mtscout6/vim-cjsx)
 - [javascript-libraries-syntax.vim](https://github.com/othree/javascript-libraries-syntax.vim)
 - [vim-jade](https://github.com/digitaltoad/vim-jade)
 - [vim-json](https://github.com/elzr/vim-json)
@@ -180,11 +184,12 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [rspec.vim](https://github.com/keithbsmiley/rspec.vim)
 
 ### Other ###
-- [mips.vim](https://github.com/vim-scripts/mips.vim)
-- [vim-mips-snippet](https://github.com/DanSnow/vim-mips-snippet)
+- [rust.vim](https://github.com/rust-lang/rust.vim)
+- [vim-elixir](https://github.com/elixir-lang/vim-elixir)
 - [vim-scala](https://github.com/derekwyatt/vim-scala)
-- [vim-blade](https://github.com/DanSnow/vim-blade)
 - [vim-markdown](https://github.com/plasticboy/vim-markdown)
 - [vim-go](https://github.com/fatih/vim-go)
 - [vinarise.vim](https://github.com/Shougo/vinarise.vim)
 - [nginx.vim](https://github.com/vim-scripts/nginx.vim)
+- [vim-vala](https://github.com/tkztmk/vim-vala)
+- [vim-mustache-handlebars](https://github.com/mustache/vim-mustache-handlebars)
