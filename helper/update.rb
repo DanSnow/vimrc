@@ -17,3 +17,5 @@ FileUtils.cp vimrc_path, dst_path
 vim_dirs.each do |dir|
   FileUtils.cp_r File.join(vim_path, dir), dst_vim
 end
+
+system 'git add -A --dry-run'
