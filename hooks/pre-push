@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+# encoding: UTF-8
+
+root = `git rev-parse --show-toplevel`
+helper_path = File.join(root, 'helper')
+
+Dir.chdir(root) do
+  while gets
+    load File.join(helper_path, 'plugin_list.rb')
+    file_list = `git add -A --dry-run`.split("\n")
+    unless file_list.grep(/'Readme\.md'/).empty?
+      system 'git add Readme.md'
+      system %w(git commit -m 'Update readme')
+    end
+  end
+end
