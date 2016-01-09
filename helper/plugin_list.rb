@@ -33,6 +33,11 @@ end
 
 readme = File.read('../Readme.md').each_line.map(&:chomp)
 idx = readme.index { |line| line =~ /\[comment\]: # Inject start/ }
-new_readme = readme.take(idx - 1) + markdown_lines
-
-File.write('../Readme.md', new_readme.join("\n"))
+if idx.nil?
+  STDERR.puts 'Could not found inject point'
+  puts
+  puts markdown_lines
+else
+  new_readme = readme.take(idx + 1) + markdown_lines
+  File.write('../Readme.md', new_readme.join("\n"))
+end
