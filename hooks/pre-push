@@ -4,7 +4,6 @@
 root = `git rev-parse --show-toplevel`.chomp
 helper_path = File.join(root, 'helper')
 
-puts File.join(helper_path, 'plugin_list.rb')
 load File.join(helper_path, 'plugin_list.rb')
 file_list = `git add -A --dry-run`.split("\n")
 unless file_list.grep(/'Readme\.md'/).empty?
