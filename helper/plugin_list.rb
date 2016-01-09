@@ -3,6 +3,7 @@
 
 vimrc_path = File.expand_path File.join(__dir__, '..', '.vimrc')
 vimrc = File.read(vimrc_path).each_line.to_a
+readme_path = File.expand_path File.join(__dir__, '..', 'Readme.md')
 
 index = vimrc.index { |line| line =~ /.*plug#begin.*/ }
 plugin_list = vimrc.drop(index + 1)
@@ -32,7 +33,7 @@ plugin_list.each do |line|
   end
 end
 
-readme = File.read('../Readme.md').each_line.map(&:chomp)
+readme = File.read(readme_path).each_line.map(&:chomp)
 idx = readme.index { |line| line =~ /\[comment\]: # Inject start/ }
 if idx.nil?
   STDERR.puts 'Could not found inject point'
@@ -40,5 +41,5 @@ if idx.nil?
   puts markdown_lines
 else
   new_readme = readme.take(idx + 1) + markdown_lines
-  File.write('../Readme.md', new_readme.join("\n"))
+  File.write(readme_path, new_readme.join("\n"))
 end
