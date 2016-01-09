@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 # encoding: UTF-8
 
+# This script will automate update plugin list in Readme.md
+
 root = `git rev-parse --show-toplevel`.chomp
 helper_path = File.join(root, 'helper')
 
