@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 # encoding:utf-8
 
-vimrc = File.read('../.vimrc').each_line.to_a
+vimrc_path = File.expand_path File.join(__dir__, '..', '.vimrc')
+vimrc = File.read(vimrc_path).each_line.to_a
 
 index = vimrc.index { |line| line =~ /.*plug#begin.*/ }
 plugin_list = vimrc.drop(index + 1)
