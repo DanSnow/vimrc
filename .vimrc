@@ -120,11 +120,9 @@ Plug 'tfnico/vim-gradle'
 Plug 'keithbsmiley/rspec.vim'
 
 """ Other
-Plug 'mips.vim'
+Plug 'rust-lang/rust.vim'
 Plug 'elixir-lang/vim-elixir'
-Plug 'DanSnow/vim-mips-snippet'
 Plug 'derekwyatt/vim-scala'
-Plug 'DanSnow/vim-blade'
 Plug 'plasticboy/vim-markdown'
 Plug 'fatih/vim-go'
 Plug 'Shougo/vinarise.vim', {'on': 'Vinarise'}
