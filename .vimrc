@@ -16,9 +16,6 @@ Plug 'Shougo/vimfiler.vim'
 Plug 'majutsushi/tagbar'
 Plug 'Shougo/unite.vim'
   Plug 'osyo-manga/unite-filetype'
-  Plug 'basyura/unite-rails'
-  Plug 'ujihisa/unite-rake'
-  Plug 'Shougo/unite-outline'
 
 "" Motion
 Plug 'CamelCaseMotion'
@@ -89,24 +86,25 @@ Plug 'ciaranm/googletest-syntax', {'for': 'cpp'}
 Plug 'justinmk/vim-syntax-extra'
 
 """ Html
-Plug 'othree/html5.vim', {'for': 'html'}
-Plug 'gregsexton/MatchTag', {'for': 'html'}
-Plug 'tpope/vim-haml', {'for': ['haml', 'sass']}
+Plug 'othree/html5.vim'
+Plug 'gregsexton/MatchTag'
+Plug 'tpope/vim-haml'
 Plug 'slim-template/vim-slim', {'for': 'slim'}
 
 """ JS
-Plug 'othree/yajs.vim', {'for': ['javascript', 'jsx']}
+Plug 'othree/yajs.vim'
 Plug 'mxw/vim-jsx', {'for': ['javascript', 'jsx']}
-Plug 'kchmck/vim-coffee-script', {'for': ['coffee', 'cjsx']}
+Plug 'kchmck/vim-coffee-script'
 Plug 'mtscout6/vim-cjsx', {'for': ['coffee', 'cjsx']}
-Plug 'othree/javascript-libraries-syntax.vim', {'for': ['javascript', 'coffee', 'ls']}
-Plug 'digitaltoad/vim-jade', {'for': 'jade'}
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'digitaltoad/vim-jade'
 Plug 'elzr/vim-json', {'for': ['json', 'cson']}
 
 """ CSS
 Plug 'ap/vim-css-color'
 Plug 'hail2u/vim-css3-syntax'
-Plug 'cakebaker/scss-syntax.vim', {'for': 'scss'}
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'wavded/vim-stylus'
 
 """ Python
 Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
@@ -129,4 +127,5 @@ Plug 'Shougo/vinarise.vim', {'on': 'Vinarise'}
 Plug 'nginx.vim'
 Plug 'tkztmk/vim-vala'
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'posva/vim-vue'
 call plug#end()
