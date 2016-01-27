@@ -82,9 +82,6 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [tagbar](https://github.com/majutsushi/tagbar)
 - [unite.vim](https://github.com/Shougo/unite.vim)
 - [unite-filetype](https://github.com/osyo-manga/unite-filetype)
-- [unite-rails](https://github.com/basyura/unite-rails)
-- [unite-rake](https://github.com/ujihisa/unite-rake)
-- [unite-outline](https://github.com/Shougo/unite-outline)
 
 ## Motion ##
 - [CamelCaseMotion](https://github.com/vim-scripts/CamelCaseMotion)
@@ -171,6 +168,7 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [vim-css-color](https://github.com/ap/vim-css-color)
 - [vim-css3-syntax](https://github.com/hail2u/vim-css3-syntax)
 - [scss-syntax.vim](https://github.com/cakebaker/scss-syntax.vim)
+- [vim-stylus](https://github.com/wavded/vim-stylus)
 
 ### Python ###
 - [vim-python-pep8-indent](https://github.com/hynek/vim-python-pep8-indent)
@@ -193,3 +191,4 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [nginx.vim](https://github.com/vim-scripts/nginx.vim)
 - [vim-vala](https://github.com/tkztmk/vim-vala)
 - [vim-mustache-handlebars](https://github.com/mustache/vim-mustache-handlebars)
+- [vim-vue](https://github.com/posva/vim-vue)
