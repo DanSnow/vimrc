@@ -9,6 +9,7 @@ call plug#begin("~/.vim/plugged")
 
 "" Interface
 Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 "" Navigation
 Plug 'a.vim'
