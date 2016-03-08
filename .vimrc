@@ -8,7 +8,7 @@ let g:mapleader=','
 call plug#begin("~/.vim/plugged")
 
 "" Interface
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
 
 "" Navigation
 Plug 'a.vim'
