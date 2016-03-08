@@ -74,7 +74,7 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 [comment]: # Inject start
 
 ## Interface ##
-- [vim-airline](https://github.com/bling/vim-airline)
+- [vim-airline](https://github.com/vim-airline/vim-airline)
 - [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
 
 ## Navigation ##
