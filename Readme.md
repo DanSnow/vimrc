@@ -75,6 +75,7 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 
 ## Interface ##
 - [vim-airline](https://github.com/bling/vim-airline)
+- [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
 
 ## Navigation ##
 - [a.vim](https://github.com/vim-scripts/a.vim)
