@@ -119,14 +119,14 @@ Plug 'tfnico/vim-gradle'
 Plug 'keithbsmiley/rspec.vim'
 
 """ Other
-Plug 'rust-lang/rust.vim'
+Plug 'rust-lang/rust.vim', {'for': 'rust'}
 Plug 'elixir-lang/vim-elixir'
-Plug 'derekwyatt/vim-scala'
+Plug 'derekwyatt/vim-scala', {'for': 'scala'}
 Plug 'plasticboy/vim-markdown'
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'Shougo/vinarise.vim', {'on': 'Vinarise'}
 Plug 'nginx.vim'
-Plug 'tkztmk/vim-vala'
+Plug 'tkztmk/vim-vala', {'for': 'vala'}
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'posva/vim-vue'
 call plug#end()
