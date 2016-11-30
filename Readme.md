@@ -92,16 +92,16 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 
 ## Completion ##
 - [delimitMate](https://github.com/Raimondi/delimitMate)
-- [ultisnips](https://github.com/SirVer/ultisnips)
 - [vim-endwise](https://github.com/tpope/vim-endwise)
 - [emmet-vim](https://github.com/mattn/emmet-vim)
+- [ultisnips](https://github.com/SirVer/ultisnips)
 
 ## Integration ##
 - [vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [vimproc.vim](https://github.com/Shougo/vimproc.vim)
-- [vimshell.vim](https://github.com/Shougo/vimshell.vim)
 - [vim-eunuch](https://github.com/tpope/vim-eunuch)
 - [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim)
+- [vimshell.vim](https://github.com/Shougo/vimshell.vim)
 
 ## Diff ##
 - [vim-diff-enhanced](https://github.com/chrisbra/vim-diff-enhanced)
@@ -157,7 +157,7 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [vim-slim](https://github.com/slim-template/vim-slim)
 
 ### JS ###
-- [yajs.vim](https://github.com/othree/yajs.vim)
+- [vim-es6](https://github.com/isRuslan/vim-es6)
 - [vim-jsx](https://github.com/mxw/vim-jsx)
 - [vim-coffee-script](https://github.com/kchmck/vim-coffee-script)
 - [vim-cjsx](https://github.com/mtscout6/vim-cjsx)
@@ -193,3 +193,4 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [vim-vala](https://github.com/tkztmk/vim-vala)
 - [vim-mustache-handlebars](https://github.com/mustache/vim-mustache-handlebars)
 - [vim-vue](https://github.com/posva/vim-vue)
+- [vim-crystal](https://github.com/rhysd/vim-crystal)
