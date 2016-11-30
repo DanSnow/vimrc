@@ -93,7 +93,7 @@ Plug 'tpope/vim-haml'
 Plug 'slim-template/vim-slim', {'for': 'slim'}
 
 """ JS
-Plug 'othree/yajs.vim'
+Plug 'isRuslan/vim-es6'
 Plug 'mxw/vim-jsx', {'for': ['javascript', 'jsx']}
 Plug 'kchmck/vim-coffee-script'
 Plug 'mtscout6/vim-cjsx', {'for': ['coffee', 'cjsx']}
@@ -129,4 +129,5 @@ Plug 'nginx.vim'
 Plug 'tkztmk/vim-vala', {'for': 'vala'}
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'posva/vim-vue'
+Plug 'rhysd/vim-crystal'
 call plug#end()
