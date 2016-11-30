@@ -85,6 +85,7 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 
 ## Integration ##
 - [vim-fugitive](https://github.com/tpope/vim-fugitive)
+- [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
 - [vimproc.vim](https://github.com/Shougo/vimproc.vim)
 - [vim-eunuch](https://github.com/tpope/vim-eunuch)
 - [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim)
@@ -103,7 +104,7 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
 - [vim-surround](https://github.com/tpope/vim-surround)
 - [vim-abolish](https://github.com/tpope/vim-abolish)
-- [tComment](https://github.com/vim-scripts/tComment)
+- [vim-commentary](https://github.com/tpope/vim-commentary)
 - [vim-unimpaired](https://github.com/tpope/vim-unimpaired)
 - [vim-repeat](https://github.com/tpope/vim-repeat)
 - [vim-exchange](https://github.com/tommcdo/vim-exchange)
@@ -119,6 +120,7 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 ## Highlight & Language support ##
 - [Block.vim](https://github.com/DanSnow/Block.vim)
 - [vim-autoformat](https://github.com/Chiel92/vim-autoformat)
+- [vim-polyglot](https://github.com/sheerun/vim-polyglot)
 
 ### Test ###
 - [vim-dispatch](https://github.com/tpope/vim-dispatch)
@@ -127,14 +129,13 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [vim-ruby](https://github.com/vim-ruby/vim-ruby)
 - [vim-rails](https://github.com/tpope/vim-rails)
 - [vim-rubocop](https://github.com/ngmy/vim-rubocop)
+- [vim-ruby-refactoring](https://github.com/ecomba/vim-ruby-refactoring)
+- [vim-rake](https://github.com/tpope/vim-rake)
 
 ### C/C++ ###
 - [c.vim](https://github.com/vim-scripts/c.vim)
 - [cSyntaxAfter](https://github.com/vim-scripts/cSyntaxAfter)
-- [gtk-vim-syntax](https://github.com/vim-scripts/gtk-vim-syntax)
 - [vim-cpp-enhanced-highlight](https://github.com/octol/vim-cpp-enhanced-highlight)
-- [cmocka.vim](https://github.com/DanSnow/cmocka.vim)
-- [googletest-syntax](https://github.com/ciaranm/googletest-syntax)
 - [vim-syntax-extra](https://github.com/justinmk/vim-syntax-extra)
 
 ### Html ###
@@ -146,8 +147,6 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 ### JS ###
 - [vim-es6](https://github.com/isRuslan/vim-es6)
 - [vim-jsx](https://github.com/mxw/vim-jsx)
-- [vim-coffee-script](https://github.com/kchmck/vim-coffee-script)
-- [vim-cjsx](https://github.com/mtscout6/vim-cjsx)
 - [javascript-libraries-syntax.vim](https://github.com/othree/javascript-libraries-syntax.vim)
 - [vim-jade](https://github.com/digitaltoad/vim-jade)
 - [vim-json](https://github.com/elzr/vim-json)
@@ -156,15 +155,12 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [vim-css-color](https://github.com/ap/vim-css-color)
 - [vim-css3-syntax](https://github.com/hail2u/vim-css3-syntax)
 - [scss-syntax.vim](https://github.com/cakebaker/scss-syntax.vim)
-- [vim-stylus](https://github.com/wavded/vim-stylus)
 
 ### Python ###
-- [vim-python-pep8-indent](https://github.com/hynek/vim-python-pep8-indent)
-- [Pretty-Vim-Python](https://github.com/sentientmachine/Pretty-Vim-Python)
+- [jedi-vim](https://github.com/davidhalter/jedi-vim)
 
 ### Tools ###
 - [scons.vim](https://github.com/vim-scripts/scons.vim)
-- [vim-rake](https://github.com/tpope/vim-rake)
 - [vim-bundler](https://github.com/tpope/vim-bundler)
 - [vim-gradle](https://github.com/tfnico/vim-gradle)
 - [rspec.vim](https://github.com/keithbsmiley/rspec.vim)
@@ -173,11 +169,5 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [rust.vim](https://github.com/rust-lang/rust.vim)
 - [vim-elixir](https://github.com/elixir-lang/vim-elixir)
 - [vim-scala](https://github.com/derekwyatt/vim-scala)
-- [vim-markdown](https://github.com/plasticboy/vim-markdown)
 - [vim-go](https://github.com/fatih/vim-go)
 - [vinarise.vim](https://github.com/Shougo/vinarise.vim)
-- [nginx.vim](https://github.com/vim-scripts/nginx.vim)
-- [vim-vala](https://github.com/tkztmk/vim-vala)
-- [vim-mustache-handlebars](https://github.com/mustache/vim-mustache-handlebars)
-- [vim-vue](https://github.com/posva/vim-vue)
-- [vim-crystal](https://github.com/rhysd/vim-crystal)
