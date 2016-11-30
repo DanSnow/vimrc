@@ -38,6 +38,7 @@ endif
 
 "" Integration
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'tpope/vim-eunuch'
 Plug 'editorconfig/editorconfig-vim'
@@ -59,7 +60,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-abolish'
-Plug 'tComment'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat'
 Plug 'tommcdo/vim-exchange'
@@ -76,6 +77,7 @@ Plug 'tomasr/molokai'
 
 Plug 'DanSnow/Block.vim'
 Plug 'Chiel92/vim-autoformat'
+Plug 'sheerun/vim-polyglot'
 
 """""""""""""""""""""""""""""""
 " Language support
@@ -88,14 +90,13 @@ Plug 'tpope/vim-dispatch'
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', {'for': 'ruby'}
 Plug 'ngmy/vim-rubocop', {'for': 'ruby'}
+Plug 'ecomba/vim-ruby-refactoring'
+Plug 'tpope/vim-rake'
 
 """ C/C++
 Plug 'c.vim', {'for': ['c', 'cpp']}
 Plug 'cSyntaxAfter', {'for': ['c', 'cpp']}
-Plug 'gtk-vim-syntax', {'for': ['c', 'cpp']}
 Plug 'octol/vim-cpp-enhanced-highlight', {'for': ['cpp']}
-Plug 'DanSnow/cmocka.vim', {'for': 'c'}
-Plug 'ciaranm/googletest-syntax', {'for': 'cpp'}
 Plug 'justinmk/vim-syntax-extra'
 
 """ Html
@@ -107,8 +108,6 @@ Plug 'slim-template/vim-slim', {'for': 'slim'}
 """ JS
 Plug 'isRuslan/vim-es6'
 Plug 'mxw/vim-jsx', {'for': ['javascript', 'jsx']}
-Plug 'kchmck/vim-coffee-script'
-Plug 'mtscout6/vim-cjsx', {'for': ['coffee', 'cjsx']}
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'digitaltoad/vim-jade'
 Plug 'elzr/vim-json', {'for': ['json', 'cson']}
@@ -117,15 +116,12 @@ Plug 'elzr/vim-json', {'for': ['json', 'cson']}
 Plug 'ap/vim-css-color'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'cakebaker/scss-syntax.vim'
-Plug 'wavded/vim-stylus'
 
 """ Python
-Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
-Plug 'sentientmachine/Pretty-Vim-Python', {'for': 'python'}
+Plug 'davidhalter/jedi-vim'
 
 """ Tools
 Plug 'scons.vim'
-Plug 'tpope/vim-rake'
 Plug 'tpope/vim-bundler'
 Plug 'tfnico/vim-gradle'
 Plug 'keithbsmiley/rspec.vim'
@@ -134,12 +130,6 @@ Plug 'keithbsmiley/rspec.vim'
 Plug 'rust-lang/rust.vim', {'for': 'rust'}
 Plug 'elixir-lang/vim-elixir'
 Plug 'derekwyatt/vim-scala', {'for': 'scala'}
-Plug 'plasticboy/vim-markdown'
 Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'Shougo/vinarise.vim', {'on': 'Vinarise'}
-Plug 'nginx.vim'
-Plug 'tkztmk/vim-vala', {'for': 'vala'}
-Plug 'mustache/vim-mustache-handlebars'
-Plug 'posva/vim-vue'
-Plug 'rhysd/vim-crystal'
 call plug#end()
