@@ -15,7 +15,6 @@ set cursorline
 set nofoldenable
 set number
 set numberwidth=4
-set title
 set showmode
 set nobomb                            " no BOM(Byte Order Mark)
 set nostartofline
@@ -69,10 +68,20 @@ set wildignore+=*.DS_Store
 set wildignore+=log/**
 set wildignore+=tmp/**
 set t_Co=256
-set ru           " word of line
-set confirm      " 操作過程有衝突時，以明確的文字來詢問
+set ru
+set confirm
 set laststatus=2
-set statusline=%4*%<\%m%<[%f\%r%h%w]\ [%{&ff},%{&fileencoding},%Y]%=\[Position=%l,%v,%p%%]
+set modeline
+set modelines=10
+set title
+set titleold="Terminal"
+set titlestring=%F
+
+set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
+
+if exists("*fugitive#statusline")
+  set statusline+=%{fugitive#statusline()}
+endif
 
 set fdm=syntax
 set fdn=3

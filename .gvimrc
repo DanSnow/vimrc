@@ -1,4 +1,5 @@
 let do_syntax_sel_menu = 1
+set mousemodel=popup
 runtime! synmenu.vim
 aunmenu &Syntax.&Show\ filetypes\ in\ menu
 " set guifont=Input\ 11

@@ -7,6 +7,10 @@ let g:mapleader=','
 
 call plug#begin("~/.vim/plugged")
 
+"""""""""""""""""""""""""""""""""
+" Environment
+"""""""""""""""""""""""""""""""""
+
 "" Interface
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -16,7 +20,7 @@ Plug 'a.vim'
 Plug 'Shougo/vimfiler.vim'
 Plug 'majutsushi/tagbar'
 Plug 'Shougo/unite.vim'
-  Plug 'osyo-manga/unite-filetype'
+Plug 'osyo-manga/unite-filetype'
 
 "" Motion
 Plug 'CamelCaseMotion'
@@ -26,17 +30,23 @@ Plug 'syntastic'
 
 "" Completion
 Plug 'Raimondi/delimitMate'
-Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-endwise'
 Plug 'mattn/emmet-vim'
+
+if v:version >= 704
+  Plug 'SirVer/ultisnips'
+endif
 
 
 "" Integration
 Plug 'tpope/vim-fugitive'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-Plug 'Shougo/vimshell.vim'
 Plug 'tpope/vim-eunuch'
 Plug 'editorconfig/editorconfig-vim'
+
+if v:version >= 703
+  Plug 'Shougo/vimshell.vim'
+endif
 
 "" Diff
 Plug 'chrisbra/vim-diff-enhanced'
@@ -68,6 +78,10 @@ Plug 'tomasr/molokai'
 
 Plug 'DanSnow/Block.vim'
 Plug 'Chiel92/vim-autoformat'
+
+"""""""""""""""""""""""""""""""
+" Language support
+"""""""""""""""""""""""""""""""
 
 """ Test
 Plug 'tpope/vim-dispatch'
