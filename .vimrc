@@ -33,7 +33,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-endwise'
 Plug 'mattn/emmet-vim'
 
-if v:version >= 704
+if v:version >= 704 && (has('python') || has('python3'))
   Plug 'SirVer/ultisnips'
 endif
 
