@@ -1,1 +1,1 @@
-let $GOPATH="$HOME/.go"
+let $GOPATH="$HOME/go"

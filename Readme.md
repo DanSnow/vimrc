@@ -5,11 +5,6 @@ My vimrc
 This is my vimrc. It contain some awesome plugin, and user friendly setting.
 
 # Branch #
-- [full version](https://github.com/DanSnow/vimrc)
-- [lite version](https://github.com/DanSnow/vimrc/tree/lite)
-- [full version (with vim7.02 support)](https://github.com/DanSnow/vimrc/tree/vim702)
-- [lite version (with vim7.02 support)](https://github.com/DanSnow/vimrc/tree/vim702-lite)
-- [Next](https://github.com/DanSnow/vimrc/tree/next)
 
 ## Overview ##
 Now have 5 version. Lite version can be a started version. And you can add your favorite support on it.  
@@ -83,9 +78,6 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [tagbar](https://github.com/majutsushi/tagbar)
 - [unite.vim](https://github.com/Shougo/unite.vim)
 - [unite-filetype](https://github.com/osyo-manga/unite-filetype)
-- [unite-rails](https://github.com/basyura/unite-rails)
-- [unite-rake](https://github.com/ujihisa/unite-rake)
-- [unite-outline](https://github.com/Shougo/unite-outline)
 
 ## Motion ##
 - [CamelCaseMotion](https://github.com/vim-scripts/CamelCaseMotion)
@@ -95,16 +87,16 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 
 ## Completion ##
 - [delimitMate](https://github.com/Raimondi/delimitMate)
-- [ultisnips](https://github.com/SirVer/ultisnips)
 - [vim-endwise](https://github.com/tpope/vim-endwise)
 - [emmet-vim](https://github.com/mattn/emmet-vim)
+- [ultisnips](https://github.com/SirVer/ultisnips)
 
 ## Integration ##
 - [vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [vimproc.vim](https://github.com/Shougo/vimproc.vim)
-- [vimshell.vim](https://github.com/Shougo/vimshell.vim)
 - [vim-eunuch](https://github.com/tpope/vim-eunuch)
 - [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim)
+- [vimshell.vim](https://github.com/Shougo/vimshell.vim)
 
 ## Diff ##
 - [vim-diff-enhanced](https://github.com/chrisbra/vim-diff-enhanced)
@@ -160,7 +152,7 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [vim-slim](https://github.com/slim-template/vim-slim)
 
 ### JS ###
-- [yajs.vim](https://github.com/othree/yajs.vim)
+- [vim-es6](https://github.com/isRuslan/vim-es6)
 - [vim-jsx](https://github.com/mxw/vim-jsx)
 - [vim-coffee-script](https://github.com/kchmck/vim-coffee-script)
 - [vim-cjsx](https://github.com/mtscout6/vim-cjsx)
@@ -172,6 +164,7 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [vim-css-color](https://github.com/ap/vim-css-color)
 - [vim-css3-syntax](https://github.com/hail2u/vim-css3-syntax)
 - [scss-syntax.vim](https://github.com/cakebaker/scss-syntax.vim)
+- [vim-stylus](https://github.com/wavded/vim-stylus)
 
 ### Python ###
 - [vim-python-pep8-indent](https://github.com/hynek/vim-python-pep8-indent)
@@ -194,3 +187,5 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [nginx.vim](https://github.com/vim-scripts/nginx.vim)
 - [vim-vala](https://github.com/tkztmk/vim-vala)
 - [vim-mustache-handlebars](https://github.com/mustache/vim-mustache-handlebars)
+- [vim-vue](https://github.com/posva/vim-vue)
+- [vim-crystal](https://github.com/rhysd/vim-crystal)

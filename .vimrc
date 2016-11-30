@@ -6,6 +6,9 @@ let mapleader=','
 let g:mapleader=','
 
 call plug#begin("~/.vim/plugged")
+"""""""""""""""""""""""""""""""""
+" Environment
+"""""""""""""""""""""""""""""""""
 
 "" Interface
 Plug 'vim-airline/vim-airline'
@@ -16,10 +19,7 @@ Plug 'a.vim'
 Plug 'Shougo/vimfiler.vim'
 Plug 'majutsushi/tagbar'
 Plug 'Shougo/unite.vim'
-  Plug 'osyo-manga/unite-filetype'
-  Plug 'basyura/unite-rails'
-  Plug 'ujihisa/unite-rake'
-  Plug 'Shougo/unite-outline'
+Plug 'osyo-manga/unite-filetype'
 
 "" Motion
 Plug 'CamelCaseMotion'
@@ -29,17 +29,22 @@ Plug 'syntastic'
 
 "" Completion
 Plug 'Raimondi/delimitMate'
-Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-endwise'
 Plug 'mattn/emmet-vim'
 
+if v:version >= 704 && (has('python') || has('python3'))
+  Plug 'SirVer/ultisnips'
+endif
 
 "" Integration
 Plug 'tpope/vim-fugitive'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-Plug 'Shougo/vimshell.vim'
 Plug 'tpope/vim-eunuch'
 Plug 'editorconfig/editorconfig-vim'
+
+if v:version >= 703
+  Plug 'Shougo/vimshell.vim'
+endif
 
 "" Diff
 Plug 'chrisbra/vim-diff-enhanced'
@@ -72,6 +77,10 @@ Plug 'tomasr/molokai'
 Plug 'DanSnow/Block.vim'
 Plug 'Chiel92/vim-autoformat'
 
+"""""""""""""""""""""""""""""""
+" Language support
+"""""""""""""""""""""""""""""""
+
 """ Test
 Plug 'tpope/vim-dispatch'
 
@@ -90,24 +99,25 @@ Plug 'ciaranm/googletest-syntax', {'for': 'cpp'}
 Plug 'justinmk/vim-syntax-extra'
 
 """ Html
-Plug 'othree/html5.vim', {'for': 'html'}
-Plug 'gregsexton/MatchTag', {'for': 'html'}
-Plug 'tpope/vim-haml', {'for': ['haml', 'sass']}
+Plug 'othree/html5.vim'
+Plug 'gregsexton/MatchTag'
+Plug 'tpope/vim-haml'
 Plug 'slim-template/vim-slim', {'for': 'slim'}
 
 """ JS
-Plug 'othree/yajs.vim', {'for': ['javascript', 'jsx']}
+Plug 'isRuslan/vim-es6'
 Plug 'mxw/vim-jsx', {'for': ['javascript', 'jsx']}
-Plug 'kchmck/vim-coffee-script', {'for': ['coffee', 'cjsx']}
+Plug 'kchmck/vim-coffee-script'
 Plug 'mtscout6/vim-cjsx', {'for': ['coffee', 'cjsx']}
-Plug 'othree/javascript-libraries-syntax.vim', {'for': ['javascript', 'coffee', 'ls']}
-Plug 'digitaltoad/vim-jade', {'for': 'jade'}
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'digitaltoad/vim-jade'
 Plug 'elzr/vim-json', {'for': ['json', 'cson']}
 
 """ CSS
 Plug 'ap/vim-css-color'
 Plug 'hail2u/vim-css3-syntax'
-Plug 'cakebaker/scss-syntax.vim', {'for': 'scss'}
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'wavded/vim-stylus'
 
 """ Python
 Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
@@ -121,13 +131,15 @@ Plug 'tfnico/vim-gradle'
 Plug 'keithbsmiley/rspec.vim'
 
 """ Other
-Plug 'rust-lang/rust.vim'
+Plug 'rust-lang/rust.vim', {'for': 'rust'}
 Plug 'elixir-lang/vim-elixir'
-Plug 'derekwyatt/vim-scala'
+Plug 'derekwyatt/vim-scala', {'for': 'scala'}
 Plug 'plasticboy/vim-markdown'
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'Shougo/vinarise.vim', {'on': 'Vinarise'}
 Plug 'nginx.vim'
-Plug 'tkztmk/vim-vala'
+Plug 'tkztmk/vim-vala', {'for': 'vala'}
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'posva/vim-vue'
+Plug 'rhysd/vim-crystal'
 call plug#end()

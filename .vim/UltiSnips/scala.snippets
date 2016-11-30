@@ -1,0 +1,538 @@
+################################################################
+#                        Scala snippets                        #
+################################################################
+
+snippet imp "import" b
+import $0
+endsnippet
+
+#if
+snippet if "if" b
+if(${1:cond}) {
+	${0:/* if bloc */}
+}
+endsnippet
+
+#if not
+snippet ifn "ifn" b
+if(!${1:cond}) {
+	${0:/* if bloc */}
+}
+endsnippet
+
+#if-else
+snippet ifel "ifel" b
+if(${1:cond}) {
+	${2:/* if bloc */}
+} else {
+	${3:/* else bloc */}
+}
+endsnippet
+
+#if-else-if
+snippet ifelif "ifelif" b
+if(${1:cond}) {
+	${2:/* if bloc */}
+} else if(${3:cond}) {
+	${4:/* else if bloc */}
+}
+endsnippet
+
+#while loop
+snippet while "while" b
+while (${1:cond}) {
+	${0:/* while bloc */}
+}
+endsnippet
+
+#for loop(classic)
+snippet for "for" b
+for (${1:var} <- ${2:exp}) {
+	$0
+}
+endsnippet
+
+#for loop(indexed)
+snippet fori "fori" b
+for (${1:i} <- ${2:0} to ${3:obj}.length) {
+	$0
+}
+endsnippet
+
+#for loop(range to)
+snippet forto "forto" b
+for (${1:i} <- ${2:0} to ${3:10}) {
+	$0
+}
+endsnippet
+
+#for loop(range until)
+snippet forun "forun" b
+for (${1:i} <- ${2:0} until ${3:10}) {
+	$0
+}
+endsnippet
+
+#exceptions
+snippet try "try"
+try {
+	${1:/* code */}
+} catch {
+	case e: FileNotFoundException => ${2:/* code */}
+	case e: IOException => ${3:/* code */}
+} finally {
+	${4:/* code */}
+}
+endsnippet
+
+#match
+snippet match "match"
+${1:exp} match {
+	case ${2:val} => ${3:/* code */}
+	case _ => ${0:/* other cases */}
+}
+endsnippet
+
+#case
+snippet case "case"
+case ${1:val} => $0
+endsnippet
+
+############################
+# methods and arguments
+#
+#arg
+snippet arg "arg"
+${1:a}: ${2:T}${3:, arg}
+endsnippet
+
+#args
+snippet args "args"
+${1:args}: ${2:T}*
+endsnippet
+
+#def
+snippet def "def" b
+def ${1:name}(${2:arg}) = ${0:/* code */}
+endsnippet
+
+#private def
+snippet prdef "prdef" b
+private def ${1:name}(${2:arg}) = ${0:/* code */}
+endsnippet
+
+#override def
+snippet ovdef "ovdef" b
+override def ${1:name}(${2:arg}) = ${0:/* code */}
+endsnippet
+
+#first class function(see scalabook p 188)
+snippet fcf "fcf"
+(${1:a}: ${2:T}) => $1 ${3:/* code */}
+endsnippet
+
+snippet => "=>"
+${1:name} => ${0:/* code */}
+endsnippet
+
+#recursion
+snippet rec "rec" b
+def ${1:name}(${2:arg}) =
+	if($2) $2
+	else $1($2)
+endsnippet
+
+#curried method
+snippet crdef "crdef" b
+def ${1:name}(${2:arg})(${3:arg}) = ${0:/* code */}
+endsnippet
+
+#main method
+#check validity of T
+snippet main "main"
+def main(args: Array[String]):${1:T} = ${0:/* main code */}
+endsnippet
+
+############################
+# basic types(general purpose)
+# you might want to use basic types snippets
+#1
+snippet T "Double"
+dbl
+endsnippet
+
+#2
+snippet T "Int"
+int
+endsnippet
+
+#3
+snippet T "Long"
+lng
+endsnippet
+
+#4
+snippet T "Char"
+chr
+endsnippet
+
+#5
+snippet T "String"
+str
+endsnippet
+
+#6
+snippet T "Array"
+arr
+endsnippet
+
+#7
+snippet T "Buffer"
+buf
+endsnippet
+
+#8
+snippet T "List"
+list
+endsnippet
+
+#9
+snippet T "Tuple"
+tpl
+endsnippet
+
+#10
+snippet T "Set"
+set
+endsnippet
+
+#11
+snippet T "Map"
+map
+endsnippet
+
+#12
+snippet T "HashSet"
+hset
+endsnippet
+
+#13
+snippet T "HashMap"
+hmap
+endsnippet
+
+#14
+snippet T "Boolean"
+bool
+endsnippet
+
+#end
+#named snippets for types
+snippet bool "bool"
+Boolean
+endsnippet
+
+snippet anyr "anyr"
+AnyRef
+endsnippet
+
+snippet dbl "dbl"
+Double
+endsnippet
+
+snippet int "int"
+Int
+endsnippet
+
+snippet str "str"
+String
+endsnippet
+
+snippet chr "chr"
+Char
+endsnippet
+
+snippet lng "lng"
+Long
+endsnippet
+
+snippet arr "arr"
+Array${1:[T]}${2:()}
+endsnippet
+
+snippet buf "buf"
+Buffer${1:[T]}${2:()}
+endsnippet
+
+snippet list "list"
+List${1:[T]}${2:()}
+endsnippet
+
+snippet tpl "tpl"
+Tuple${1:2}[${2:T},${3:T}]
+endsnippet
+
+snippet set "set"
+Set${1:[T]}${2:()}
+endsnippet
+
+snippet hset "hset"
+HashSet${1:[T]}${2:()}
+endsnippet
+
+snippet mhset "mhset"
+mutable.HashSet${1:[T]}${2:()}
+endsnippet
+
+#for maps
+snippet keyval "keyval"
+${1:key}->${2:val}${3:, keyval}
+endsnippet
+
+snippet map "map"
+Map[${1:T},${2:T}]${3:(keyval)}
+endsnippet
+
+snippet hmap "hmap"
+HashMap[${1:T},${2:T}]${3:(keyval)}
+endsnippet
+
+snippet mmap "mmap"
+mutable.Map[${1:T},${2:T}]${3:(keyval)}
+endsnippet
+
+snippet mhmap "mhmap"
+mutable.HashMap[${1:T},${2:T}]${3:(keyval)}
+endsnippet
+
+#TODO add TreeMap and TreeSet
+#asInstanceOf[]
+snippet as "as"
+${1:name}.asInstanceOf[${0:T}]
+endsnippet
+
+#isInstanceOf[]
+#end
+#collections methods
+#scope() with one arg
+snippet (a "(a"
+(${1:a} => ${0:/* code */})
+endsnippet
+
+#scope() with two args
+snippet {( "{("
+{(${1:a},${2:b}) =>
+	${0:/* code */}
+}
+endsnippet
+
+#filter
+snippet filter "filter"
+${1:name}.filter (a
+endsnippet
+
+#map function
+snippet mapf "mapf"
+${1:name}.map (a
+endsnippet
+
+#flatmap
+snippet flatmap "flatmap"
+${1:name}.flatMap${2:[T]}(a
+endsnippet
+
+#fold left
+snippet fldl "fldl"
+${1:name}.foldLeft(${2:first}) {(
+endsnippet
+
+#fold right
+snippet fldr "fldr"
+${1:name}.foldRight(${2:first}) {(
+endsnippet
+
+#fold left operator(if u wanna reduce readability of ur code)
+#use wildcard symbols
+snippet /: "/:"
+(${1:first}/:${2:name})(${3:/* code */})
+endsnippet
+
+#fold right operator
+snippet :\ ":\"
+(${1:first}:\${2:name})(${3:/* code */})
+endsnippet
+
+#reduce left
+snippet redl "redl"
+${1:name}.reduceLeft[${2:T}] {(
+endsnippet
+
+#reduce right
+snippet redr "redr"
+${1:name}.reduceRight[${2:T}] {(
+endsnippet
+
+#zipWithIndex(safe way).
+#see http://daily-scala.blogspot.com/2010/05/zipwithindex.html
+snippet zipwi "zipwi"
+${1:name}.view.zipWithIndex
+endsnippet
+
+#split
+snippet spl "spl"
+${1:name}.split("${2:,}")
+endsnippet
+
+#end
+snippet val "val"
+val ${1:name}${2:: T} = ${3:value}
+endsnippet
+
+snippet var "var"
+var ${1:name}${2:: T} = ${3:value}
+endsnippet
+
+############################
+# classes
+#
+#extends
+snippet extends "extends"
+extends ${1:what}
+endsnippet
+
+#with
+snippet with "with"
+with ${1:what}${2: with}
+endsnippet
+
+#auxiliary constructor(a. this)
+snippet athis "athis"
+def this(arg) = this(arg)
+endsnippet
+
+#abstract class
+snippet abstract "abstract"
+abstract class ${1:name}${2:(arg)}${3: extends }${4: with} {
+	${5:override def toString = "$1"}
+	${6:/* code */}
+}
+endsnippet
+
+#class
+snippet class "class"
+class ${1:name}${2:(arg)}${3: extends }${4: with} {
+	${5:override def toString = "$1"}
+	${6:/* code */}
+}
+endsnippet
+
+#object
+snippet object "object"
+object ${1:name}(${2:arg})${3: extends }${4: with} {
+  ${0:/* obj code here */}
+}
+endsnippet
+
+#trait
+snippet trait "trait"
+trait ${1:name}${2: extends }${3: with} ${4:{}
+endsnippet
+
+#class with trait Ordered(page 265)
+snippet ordered "ordered"
+class ${1:name}${2:(arg)} extends Ordered[$1] ${3: with} {
+	${4:override def toString = "$1"}
+	def compare(that: $1) = ${5:this - that}
+	${6:/* code */}
+}
+endsnippet
+
+#case class
+snippet casecl "casecl"
+case class ${1:name}${2:(arg)}${3: extends }${4: with} ${5:{}
+endsnippet
+
+############################
+# testing
+#
+#scalatest imports
+snippet scalatest "scalatest"
+${1:import org.scalatest.Suite}
+${2:import org.scalatest.FunSuite}
+endsnippet
+
+#assert
+snippet assert "assert"
+assert(${1:a}==${2:b})
+endsnippet
+
+#ensuring(p 296)
+snippet ensuring "ensuring"
+ifel ensuring(${1:a}==${2:b})
+endsnippet
+
+#expect
+snippet expect "expect"
+expect(${1:what}) {
+endsnippet
+
+#intercept
+snippet intercept "intercept"
+intercept[${1:IllegalArgumentException}] {
+endsnippet
+
+#test
+snippet test "test"
+test("${0:description}") {
+endsnippet
+
+#suite
+snippet suite "suite"
+class ${1:name} extends Suite {
+	def test() {
+}
+endsnippet
+
+#funsuite
+snippet fsuite "fsuite"
+class ${1:name} extends FunSuite {
+	test("${2:description}") {
+}
+endsnippet
+
+############################
+# SBT
+#
+snippet webproject "webproject"
+import sbt._
+class ${1:Name}(info: ProjectInfo) extends DefaultWebProject(info) {
+	val liftVersion = "${2:2.3}"
+	override def libraryDependencies = Set(
+	) ++ super.libraryDependencies
+	val snapshots = ScalaToolsSnapshots
+}
+endsnippet
+
+#depencies
+snippet liftjar "liftjar"
+"net.liftweb" %% "${1:lib}" % liftVersion % "compile->default",
+endsnippet
+
+snippet jettyjar "jettyjar"
+"org.mortbay.jetty" % "jetty" % "${1:version}" % "test->default",
+endsnippet
+
+############################
+# Lift
+#
+#lift imports
+snippet liftimports "liftimports"
+import _root_.net.liftweb.http._
+import S._
+import _root_.net.liftweb.util._
+import Helpers._
+import _root_.scala.xml._
+endsnippet
+
+#TODO LIFT,SBT,WEB.XML,HTML snippets
+
