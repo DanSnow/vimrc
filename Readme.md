@@ -13,6 +13,7 @@ This is my vimrc. It contain some awesome plugin, and user friendly setting.
 $ git clone https://github.com/DanSnow/vimrc.git
 $ cd vimrc
 $ ./install.sh
+```
 
 This will take amount time to install plugin.  
 It will have some of error at first. Just ignore it.  
