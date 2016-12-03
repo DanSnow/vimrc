@@ -50,7 +50,7 @@ Normal mode:
 - \<M-Left\>: Decrese horizontal size (When window split)
 - \<M-Down\>: Increse vertical size (When window split)
 - \<M-Up\>: Decrese vertical size (When window split)
-- gcc: Toggle current comment(By tComment)
+- gcc: Toggle current comment(By vim-commentary)
 
 Visual mode:
 - \<C-Right\>: Increase select line indent
