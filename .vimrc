@@ -20,12 +20,13 @@ Plug 'Shougo/vimfiler.vim'
 Plug 'majutsushi/tagbar'
 Plug 'Shougo/unite.vim'
 Plug 'osyo-manga/unite-filetype'
+Plug 'Shougo/neoyank.vim'
 
 "" Motion
 Plug 'CamelCaseMotion'
 
 "" Syntax Check
-Plug 'syntastic'
+Plug 'w0rp/ale'
 
 "" Completion
 Plug 'Raimondi/delimitMate'
@@ -106,7 +107,8 @@ Plug 'tpope/vim-haml'
 Plug 'slim-template/vim-slim', {'for': 'slim'}
 
 """ JS
-Plug 'isRuslan/vim-es6'
+Plug 'othree/yajs.vim'
+Plug 'othree/es.next.syntax.vim'
 Plug 'mxw/vim-jsx', {'for': ['javascript', 'jsx']}
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'digitaltoad/vim-jade'
@@ -132,4 +134,5 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'derekwyatt/vim-scala', {'for': 'scala'}
 Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'Shougo/vinarise.vim', {'on': 'Vinarise'}
+Plug 'rhysd/vim-crystal'
 call plug#end()
