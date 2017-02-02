@@ -71,12 +71,13 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [tagbar](https://github.com/majutsushi/tagbar)
 - [unite.vim](https://github.com/Shougo/unite.vim)
 - [unite-filetype](https://github.com/osyo-manga/unite-filetype)
+- [neoyank.vim](https://github.com/Shougo/neoyank.vim)
 
 ## Motion ##
 - [CamelCaseMotion](https://github.com/vim-scripts/CamelCaseMotion)
 
 ## Syntax Check ##
-- [syntastic](https://github.com/vim-scripts/syntastic)
+- [ale](https://github.com/w0rp/ale)
 
 ## Completion ##
 - [delimitMate](https://github.com/Raimondi/delimitMate)
@@ -146,7 +147,8 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [vim-slim](https://github.com/slim-template/vim-slim)
 
 ### JS ###
-- [vim-es6](https://github.com/isRuslan/vim-es6)
+- [yajs.vim](https://github.com/othree/yajs.vim)
+- [es.next.syntax.vim](https://github.com/othree/es.next.syntax.vim)
 - [vim-jsx](https://github.com/mxw/vim-jsx)
 - [javascript-libraries-syntax.vim](https://github.com/othree/javascript-libraries-syntax.vim)
 - [vim-jade](https://github.com/digitaltoad/vim-jade)
@@ -172,3 +174,4 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [vim-scala](https://github.com/derekwyatt/vim-scala)
 - [vim-go](https://github.com/fatih/vim-go)
 - [vinarise.vim](https://github.com/Shougo/vinarise.vim)
+- [vim-crystal](https://github.com/rhysd/vim-crystal)
