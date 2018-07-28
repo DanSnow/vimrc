@@ -69,7 +69,6 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [tagbar](https://github.com/majutsushi/tagbar)
 - [denite.nvim](https://github.com/Shougo/denite.nvim)
 - [unite.vim](https://github.com/Shougo/unite.vim)
-- [unite-filetype](https://github.com/osyo-manga/unite-filetype)
 - [neoyank.vim](https://github.com/Shougo/neoyank.vim)
 
 ## Motion ##
