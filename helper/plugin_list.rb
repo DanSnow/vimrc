@@ -5,9 +5,9 @@ vimrc_path = File.expand_path File.join(__dir__, '..', '.vimrc')
 vimrc = File.read(vimrc_path).each_line.to_a
 readme_path = File.expand_path File.join(__dir__, '..', 'Readme.md')
 
-index = vimrc.index { |line| line =~ /.*plug#begin.*/ }
+index = vimrc.index { |line| line =~ /.*dein#begin.*/ }
 plugin_list = vimrc.drop(index + 1)
-index = plugin_list.index { |line| line =~ /.*plug#end.*/ }
+index = plugin_list.index { |line| line =~ /.*dein#end.*/ }
 plugin_list = plugin_list.take(index)
 
 plugin_list.reject! { |line| line =~ /^$/ }
@@ -15,16 +15,17 @@ plugin_list.reject! { |line| line =~ /^$/ }
 markdown_lines = []
 
 plugin_list.each do |line|
-  if (m = line.match(/^""\s(.*)/))
+  if (m = line.match(/^\s*""\s(.*)/))
     markdown_lines << "\n"
     markdown_lines << "## #{m[1]} ##\n"
-  elsif (m = line.match(/^"""\s(.*)/))
+  elsif (m = line.match(/^\s*"""\s(.*)/))
     markdown_lines << "\n"
     markdown_lines << "### #{m[1]} ###\n"
-  elsif (m = line.match(/^\s*Plug\s+'(.*?)'(?:$|,.*)/))
+  elsif (m = line.match(/^\s*call\s+dein#add\('(.*?)'(?:$|,.*)?\)/))
     idx = line.index '/'
     if idx
       url = "https://github.com/#{m[1]}"
+      url = 'https://github.com/Shougo/dein.vim' if line.match(/dein\.vim/) # Hardcode dein.vim url
       markdown_lines << "- [#{m[1].sub(%r{^.*/}, '')}](#{url})\n"
     else
       url = "https://github.com/vim-scripts/#{m[1]}"

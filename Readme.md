@@ -15,9 +15,7 @@ $ cd vimrc
 $ ./install.sh
 ```
 
-This will take amount time to install plugin.  
-It will have some of error at first. Just ignore it.  
-After finish you can start use your vim.  
+It will install all plugin at first start  
 
 # Key Mapping #
 
@@ -38,14 +36,12 @@ Normal mode:
 - \<Tab>: Increase indent to current line
 - \<S-Tab\>: Decrease indent to current line
 - \<leader\>a: Jump to header file(By a.vim)
-- \<leader\>f: Unite file
-- \<leader\>e: Unite buffer
-- \<leader\>t: Unite filetype
-- \<leader\>y: Unite yank history
+- \<leader\>f: Denite file
+- \<leader\>e: Denite buffer
+- \<leader\>t: Denite filetype
 - \<leader\>p: Previous buffer
 - \<leader\>n: Next bufer
 - \<leader\>z: Toggle persent Mode
-- \<C-p\>: Unite
 - \<M-Right\>: Increse horizontal size (When window split)
 - \<M-Left\>: Decrese horizontal size (When window split)
 - \<M-Down\>: Increse vertical size (When window split)
@@ -60,6 +56,8 @@ Visual mode:
 I admit the amount of plugin cause performance problem. But it useful, maybe.
 
 [comment]: # Inject start
+- [dein.vim](https://github.com/Shougo/dein.vim)
+- [dein-ui.vim](https://github.com/wsdjeg/dein-ui.vim)
 
 ## Interface ##
 - [vim-airline](https://github.com/vim-airline/vim-airline)
@@ -69,6 +67,7 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [a.vim](https://github.com/vim-scripts/a.vim)
 - [vimfiler.vim](https://github.com/Shougo/vimfiler.vim)
 - [tagbar](https://github.com/majutsushi/tagbar)
+- [denite.nvim](https://github.com/Shougo/denite.nvim)
 - [unite.vim](https://github.com/Shougo/unite.vim)
 - [unite-filetype](https://github.com/osyo-manga/unite-filetype)
 - [neoyank.vim](https://github.com/Shougo/neoyank.vim)
@@ -151,7 +150,7 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [es.next.syntax.vim](https://github.com/othree/es.next.syntax.vim)
 - [vim-jsx](https://github.com/mxw/vim-jsx)
 - [javascript-libraries-syntax.vim](https://github.com/othree/javascript-libraries-syntax.vim)
-- [vim-jade](https://github.com/digitaltoad/vim-jade)
+- [vim-pug](https://github.com/digitaltoad/vim-pug)
 - [vim-json](https://github.com/elzr/vim-json)
 
 ### CSS ###
@@ -169,9 +168,11 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [rspec.vim](https://github.com/keithbsmiley/rspec.vim)
 
 ### Other ###
+- [vim-pony](https://github.com/jakwings/vim-pony)
 - [rust.vim](https://github.com/rust-lang/rust.vim)
 - [vim-elixir](https://github.com/elixir-lang/vim-elixir)
 - [vim-scala](https://github.com/derekwyatt/vim-scala)
 - [vim-go](https://github.com/fatih/vim-go)
 - [vinarise.vim](https://github.com/Shougo/vinarise.vim)
 - [vim-crystal](https://github.com/rhysd/vim-crystal)
+- [vim-wakatime](https://github.com/wakatime/vim-wakatime)
