@@ -3,7 +3,7 @@ function! SplitOpen()
   normal gf
   if v:errmsg == ""
     vertical sbp
-    wincmd H
+    wincmd gg
     wincmd l
     vertical resize 40
     wincmd h

@@ -1,1 +1,1 @@
-let g:used_javascript_libs = 'jquery,underscore,angularjs,angularui,jasmine,sugar,chai'
+let g:used_javascript_libs = 'jquery,underscore,jasmine,chai'

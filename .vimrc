@@ -28,13 +28,17 @@ if dein#load_state('~/.vim/plugged')
   "" Interface
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
+  call dein#add('ryanoasis/vim-devicons')
+  call dein#add('RRethy/vim-illuminate')
+  call dein#add('mhinz/vim-startify')
+  call dein#add('junegunn/goyo.vim')
 
   "" Navigation
   call dein#add('vim-scripts/a.vim')
-  call dein#add('Shougo/vimfiler.vim')
-  call dein#add('majutsushi/tagbar', {'on_cmd': ['TagbarToggle']})
-  call dein#add('Shougo/denite.nvim')
-  call dein#add('Shougo/unite.vim')
+  call dein#add('Shougo/defx.nvim', {'hook_post_update': 'UpdateRemotePlugins'})
+  call dein#add('kristijanhusak/defx-icons')
+  " call dein#add('majutsushi/tagbar', {'on_cmd': ['TagbarToggle']})
+  call dein#add('Shougo/denite.nvim', {'hook_post_update': 'UpdateRemotePlugins'})
   call dein#add('Shougo/neoyank.vim')
 
   "" Motion
@@ -55,13 +59,9 @@ if dein#load_state('~/.vim/plugged')
   "" Integration
   call dein#add('tpope/vim-fugitive')
   call dein#add('airblade/vim-gitgutter')
-  call dein#add('Shougo/vimproc.vim', { 'build': 'make' })
   call dein#add('tpope/vim-eunuch')
   call dein#add('editorconfig/editorconfig-vim')
-
-  if v:version >= 703
-    call dein#add('Shougo/vimshell.vim')
-  endif
+  call dein#add('Shougo/deol.nvim')
 
   "" Diff
   call dein#add('chrisbra/vim-diff-enhanced')
@@ -71,7 +71,7 @@ if dein#load_state('~/.vim/plugged')
 
   "" Utility
   call dein#add('kshenoy/vim-signature')
-  call dein#add('vim-scripts/SingleCompile')
+  call dein#add('vim-scripts/SingleCompile', {'on_cmd': ['SingleCompile', 'SingleCompileRun'], 'hook_post_source': function('SingleCompile#ConfigTemplate')})
   call dein#add('Yggdroot/indentLine')
   call dein#add('terryma/vim-multiple-cursors')
   call dein#add('tpope/vim-surround')
@@ -88,12 +88,15 @@ if dein#load_state('~/.vim/plugged')
   "" Color Scheme
   call dein#add('NLKNguyen/papercolor-theme')
   call dein#add('tomasr/molokai')
+  call dein#add('Nequo/vim-allomancer')
 
   "" Highlight & Language support
 
   call dein#add('DanSnow/Block.vim')
-  call dein#add('Chiel92/vim-autoformat', {'on_cmd': 'Autoformat'})
   call dein#add('sheerun/vim-polyglot')
+  call dein#add('autozimu/LanguageClient-neovim', {'rev': 'next', 'build': './install.sh'})
+  call dein#add('Shougo/deoplete.nvim', {'hook_post_update': 'UpdateRemotePlugins'})
+  call dein#add('zchee/deoplete-zsh')
 
   """""""""""""""""""""""""""""""
   " Language support
@@ -152,6 +155,7 @@ if dein#load_state('~/.vim/plugged')
   call dein#add('Shougo/vinarise.vim', {'on_cmd': 'Vinarise'})
   call dein#add('rhysd/vim-crystal', {'on_ft': 'crystal'})
   call dein#add('wakatime/vim-wakatime')
+  call dein#add('ClockworkNet/vim-apparmor')
 
 
   " Required:
@@ -166,4 +170,6 @@ syntax enable
 if dein#check_install()
   call dein#install()
 endif
+
+let g:deoplete#enable_at_startup = 1
 

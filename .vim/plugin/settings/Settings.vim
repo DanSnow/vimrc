@@ -26,14 +26,15 @@ set splitbelow                        " always open horizontal split window belo
 set scrolloff=5                       " start scrolling when n lines away from margins
 set switchbuf=useopen
 set showtabline=2                     " always show tab
-set wildmode=longest,list             " use emacs-style tab completion when selecting files, etc
+set wildmode=full                     " use emacs-style tab completion when selecting files, etc
 set wildmenu                          " make tab completion for files/buffers act like bash
 if !has('nvim')
   set key=			                        " disable encryption
 endif
 set completeopt=longest,menuone
 set synmaxcol=160
-set viminfo=			                    " disable .viminfo file
+" set viminfo=			                    " disable .viminfo file
+set shada='100,h,n$HOME/.vim/files/info/viminfo
 set ttyfast                           " send more chars while redrawing
 set timeoutlen=300
 set nobackup                          " no *~ backup files
@@ -52,7 +53,6 @@ set cmdheight=2
 set hlsearch                          " search highlighting
 set incsearch                         " incremental search
 set noerrorbells
-set t_vb=
 if !has('nvim')
   set encoding=utf-8
 endif
@@ -70,7 +70,7 @@ set wildignore+=log/**
 set wildignore+=tmp/**
 set t_Co=256
 set ru           " word of line
-set confirm      " 操作過程有衝突時，以明確的文字來詢問
+set confirm
 set laststatus=2
 set statusline=%4*%<\%m%<[%f\%r%h%w]\ [%{&ff},%{&fileencoding},%Y]%=\[Position=%l,%v,%p%%]
 
@@ -90,20 +90,18 @@ syntax enable
 " remove tailing whitespace
 " autocmd BufWritePre * :%s/\s\+$//e
 
-autocmd FileType python set sw=2
-
 " Add width bound
 execute "set colorcolumn=" . join(range(161,335), ',')
 
 " next and prev tab
-noremap <F7> gT
-noremap <F8> gt
-inoremap <F7> <esc>gTa
-inoremap <F8> <esc>gta
+" noremap <F7> gT
+" noremap <F8> gt
+" inoremap <F7> <esc>gTa
+" inoremap <F8> <esc>gta
 
 " Next and prev buffer
-noremap <leader>p :bp!<cr>
-noremap <leader>n :bn!<cr>
+noremap H :bp!<cr>
+noremap L :bn!<cr>
 
 " Open file under cursor
 map <leader>gf :e <cfile><cr>
@@ -117,8 +115,8 @@ vmap <C-Left> <gv
 " remap VIM 0
 map 0 ^
 
-inoremap \<Plug>MoveToHome :normal I<CR>
-inoremap \<Plug>MoveToEnd :normal A<CR>
+" inoremap \<Plug>MoveToHome :normal I<CR>
+" inoremap \<Plug>MoveToEnd :normal A<CR>
 
 imap <silent> <C-a> <C-o>I
 imap <silent> <C-e> <C-o>A
@@ -131,13 +129,15 @@ nmap <leader>v :e $MYVIMRC<CR>
 
 highlight Pmenu ctermfg=white  ctermbg=gray
 highlight PmenuSel ctermfg=white  ctermbg=blue
+highlight MatchParen cterm=NONE ctermbg=cyan ctermfg=black
 
 " select ALL
 " map <C-A> ggVG
 
 map <F4> :set hls!<BAR>set hls?<CR>
 
-colorscheme molokai
+" colorscheme molokai
+colorscheme allomancer
 
 map <silent> <A-Up> <C-w>+
 map <silent> <A-Down> <C-w>-
@@ -149,8 +149,8 @@ map <silent> <C-S-Down> :m .+1<Cr>==
 inoremap <silent> <C-S-Up> <Esc>:m .-2<Cr>==gi
 inoremap <silent> <C-S-Down> <Esc>:m .+1<Cr>==gi
 
-" auto reload after save .vimrc
-au! BufWritePost .vimrc source %
+" " auto reload after save .vimrc
+" au! BufWritePost .vimrc source %
 
 "auto change work dir
 autocmd BufEnter * silent! lcd %:p:h

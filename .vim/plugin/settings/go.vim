@@ -1,1 +1,0 @@
-let $GOPATH="$HOME/go"

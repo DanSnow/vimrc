@@ -1,5 +1,5 @@
-nnoremap [denite] <Nop>
-nmap <C-d> [denite]
+" nnoremap [denite] <Nop>
+" nmap <C-d> [denite]
 
 " grep
 call denite#custom#var('grep', 'command', ['rg'])
@@ -9,24 +9,48 @@ call denite#custom#var('grep', 'pattern_opt', ['--regex'])
 call denite#custom#var('grep', 'separator', ['--'])
 call denite#custom#var('grep', 'final_opts', [])
 
-nnoremap <silent> [denite]<C-g> :<C-u>Denite grep -mode=normal<CR>
-nnoremap <silent> [denite]<C-r> :<C-u>Denite -resume<CR>
-nnoremap <silent> [denite]<C-n> :<C-u>Denite -resume -cursor-pos=+1 -immediately<CR>
-nnoremap <silent> [denite]<C-p> :<C-u>Denite -resume -cursor-pos=-1 -immediately<CR>
+autocmd FileType denite call s:denite_my_settings()
+function! s:denite_my_settings() abort
+  nnoremap <silent><buffer><expr> <CR>
+        \ denite#do_map('do_action')
+  nnoremap <silent><buffer><expr> d
+        \ denite#do_map('do_action', 'delete')
+  nnoremap <silent><buffer><expr> p
+        \ denite#do_map('do_action', 'preview')
+  nnoremap <silent><buffer><expr> q
+        \ denite#do_map('quit')
+  nnoremap <silent><buffer><expr> i
+        \ denite#do_map('open_filter_buffer')
+  nnoremap <silent><buffer><expr> <Space>
+        \ denite#do_map('toggle_select').'j'
+endfunction
+
+autocmd FileType denite-filter call s:denite_filter_my_settings()
+function! s:denite_filter_my_settings() abort
+  setlocal scrolloff=0
+  vertical resize 1
+  imap <silent><buffer> <C-o> <Plug>(denite_filter_quit)
+endfunction
+
+noremap <silent> <leader>d :Denite source<CR>
+noremap <silent> <leader>f :Denite file/rec file:new<CR>
+noremap <silent> <leader>e :Denite buffer<CR>
+noremap <silent> <leader>t :Denite filetype<CR>
 
 " ノーマルモードで起動、jjでノーマルへ
-call denite#custom#option('default', {'mode': 'normal'})
+call denite#custom#option('default', {'mode': 'insert'})
 call denite#custom#map('insert', 'jj', '<denite:enter_mode:normal>')
 
 " ファイル一覧
-noremap [denite] :Denite file/rec file:new -mode=insert<CR>
-call denite#custom#var('file_rec', 'command', ['rg', '--follow', '--color', 'never', '--no-heading', '-g', ''])
-call denite#custom#var('file_rec', 'matchers', ['matcher_fuzzy', 'matcher_ignore_globs'])
+noremap [denite] :Denite file/rec file:new<CR>
+" call denite#custom#var('file_rec', 'command', ['rg', '--follow', '--color', 'never', '--no-heading', '-g', ''])
+call denite#custom#var('file/rec', 'command', ['fd', '--follow', '--type', 'f', '.'])
+call denite#custom#var('file/rec', 'matchers', ['matcher_fuzzy', 'matcher_ignore_globs'])
 call denite#custom#filter('matcher_ignore_globs', 'ignore_globs',
       \ ['.git/', '__pycache__/', '*.o', '*.make', '*.min.*'])
 
 " ディレクトリ一覧
-noremap [denite]<C-d> :<C-u>Denite directory_rec<CR>
+" noremap [denite]<C-d> :<C-u>Denite directory_rec<CR>
 
 " 移動
 call denite#custom#map('normal', 'j', '<denite:nop>', 'noremap')
