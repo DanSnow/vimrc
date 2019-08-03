@@ -62,13 +62,16 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 ## Interface ##
 - [vim-airline](https://github.com/vim-airline/vim-airline)
 - [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
+- [vim-devicons](https://github.com/ryanoasis/vim-devicons)
+- [vim-illuminate](https://github.com/RRethy/vim-illuminate)
+- [vim-startify](https://github.com/mhinz/vim-startify)
+- [goyo.vim](https://github.com/junegunn/goyo.vim)
 
 ## Navigation ##
 - [a.vim](https://github.com/vim-scripts/a.vim)
-- [vimfiler.vim](https://github.com/Shougo/vimfiler.vim)
-- [tagbar](https://github.com/majutsushi/tagbar)
+- [defx.nvim](https://github.com/Shougo/defx.nvim)
+- [defx-icons](https://github.com/kristijanhusak/defx-icons)
 - [denite.nvim](https://github.com/Shougo/denite.nvim)
-- [unite.vim](https://github.com/Shougo/unite.vim)
 - [neoyank.vim](https://github.com/Shougo/neoyank.vim)
 
 ## Motion ##
@@ -86,10 +89,9 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 ## Integration ##
 - [vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
-- [vimproc.vim](https://github.com/Shougo/vimproc.vim)
 - [vim-eunuch](https://github.com/tpope/vim-eunuch)
 - [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim)
-- [vimshell.vim](https://github.com/Shougo/vimshell.vim)
+- [deol.nvim](https://github.com/Shougo/deol.nvim)
 
 ## Diff ##
 - [vim-diff-enhanced](https://github.com/chrisbra/vim-diff-enhanced)
@@ -116,11 +118,14 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 ## Color Scheme ##
 - [papercolor-theme](https://github.com/NLKNguyen/papercolor-theme)
 - [molokai](https://github.com/tomasr/molokai)
+- [vim-allomancer](https://github.com/Nequo/vim-allomancer)
 
 ## Highlight & Language support ##
 - [Block.vim](https://github.com/DanSnow/Block.vim)
-- [vim-autoformat](https://github.com/Chiel92/vim-autoformat)
 - [vim-polyglot](https://github.com/sheerun/vim-polyglot)
+- [LanguageClient-neovim](https://github.com/autozimu/LanguageClient-neovim)
+- [deoplete.nvim](https://github.com/Shougo/deoplete.nvim)
+- [deoplete-zsh](https://github.com/zchee/deoplete-zsh)
 
 ### Test ###
 - [vim-dispatch](https://github.com/tpope/vim-dispatch)
@@ -175,3 +180,4 @@ I admit the amount of plugin cause performance problem. But it useful, maybe.
 - [vinarise.vim](https://github.com/Shougo/vinarise.vim)
 - [vim-crystal](https://github.com/rhysd/vim-crystal)
 - [vim-wakatime](https://github.com/wakatime/vim-wakatime)
+- [vim-apparmor](https://github.com/ClockworkNet/vim-apparmor)
