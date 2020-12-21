@@ -5,7 +5,7 @@
 call denite#custom#var('grep', 'command', ['rg'])
 call denite#custom#var('grep', 'default_opts', ['-i', '--vimgrep', '--no-heading'])
 call denite#custom#var('grep', 'recursive_opts', [])
-call denite#custom#var('grep', 'pattern_opt', ['--regex'])
+call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
 call denite#custom#var('grep', 'separator', ['--'])
 call denite#custom#var('grep', 'final_opts', [])
 
@@ -28,21 +28,33 @@ endfunction
 autocmd FileType denite-filter call s:denite_filter_my_settings()
 function! s:denite_filter_my_settings() abort
   setlocal scrolloff=0
-  vertical resize 1
   imap <silent><buffer> <C-o> <Plug>(denite_filter_quit)
+  imap <silent><buffer> <CR> <Plug>(denite_filter_quit)
 endfunction
 
 noremap <silent> <leader>d :Denite source<CR>
 noremap <silent> <leader>f :Denite file/rec file:new<CR>
-noremap <silent> <leader>e :Denite buffer<CR>
+noremap <silent> <leader>x :Denite buffer<CR>
 noremap <silent> <leader>t :Denite filetype<CR>
 
+
+let s:denite_options = {
+\ 'split': 'floating',
+\ 'prompt': 'λ:',
+\ 'statusline': 0,
+\ 'highlight_matched_char': 'WildMenu',
+\ 'highlight_matched_range': 'Visual',
+\ 'highlight_window_background': 'Visual',
+\ 'highlight_prompt': 'StatusLine',
+\ 'winrow': 1,
+\ 'vertical_preview': 1,
+\ }
+
 " ノーマルモードで起動、jjでノーマルへ
-call denite#custom#option('default', {'mode': 'insert'})
-call denite#custom#map('insert', 'jj', '<denite:enter_mode:normal>')
+call denite#custom#option('default', s:denite_options)
 
 " ファイル一覧
-noremap [denite] :Denite file/rec file:new<CR>
+" noremap [denite] :Denite file/rec file:new<CR>
 " call denite#custom#var('file_rec', 'command', ['rg', '--follow', '--color', 'never', '--no-heading', '-g', ''])
 call denite#custom#var('file/rec', 'command', ['fd', '--follow', '--type', 'f', '.'])
 call denite#custom#var('file/rec', 'matchers', ['matcher_fuzzy', 'matcher_ignore_globs'])

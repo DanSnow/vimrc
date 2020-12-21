@@ -1,0 +1,67 @@
+snippet main "main() (main)"
+fn main() {
+	${VISUAL}${0:${VISUAL/(.*)//}}
+}
+endsnippet
+
+snippet let "let name[:type]=exp (let)"
+let ${1:name} = ${3:expression};
+endsnippet
+
+snippet if "if ... (if)"
+if (${1:condition}) {
+	${VISUAL}${2:${VISUAL/(.*)//}}
+} ${0}
+endsnippet
+
+snippet elif "else if ... (elif)"
+else if (${1:condition}) {
+	${VISUAL}${2:${VISUAL/(.*)//}}
+} ${0}
+endsnippet
+
+snippet el "else ... (else)"
+else {
+	${VISUAL}${1:${VISUAL/(.*)//}}
+} ${0}
+endsnippet
+
+snippet fn "fn ... () { ... } (fn)"
+fn ${1:name}(${2:parameters})${VISUAL} {
+	${0}
+}
+endsnippet
+
+snippet fn-> "fn ... () -> ... { ... } (fn)"
+fn ${1:name}(${2:parameters}) -> ${VISUAL}${3:${VISUAL/(.*)/i32/}} {
+	${0}
+}
+endsnippet
+
+snippet st "struct ... (struct)"
+struct ${1:name} {
+	${0}
+}
+endsnippet
+
+snippet en "enum ... (enum)"
+enum ${1:name} {
+	${0}
+}
+endsnippet
+
+snippet ma "match ... (match)"
+match ${1:expression} {
+	${2:pattern} => ${3:expression},
+	${4:pattern} => ${5:expression},
+	${VISUAL}${6:${VISUAL/(.*)/_/}} => ${0:expression},
+}
+endsnippet
+
+snippet pl "println!" b
+println!("${1}");
+endsnippet
+
+snippet epl "println!" b
+eprintln!("${1}");
+endsnippet

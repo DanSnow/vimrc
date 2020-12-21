@@ -16,7 +16,7 @@ set nofoldenable
 set number
 set numberwidth=4
 set title
-set showmode
+" set showmode
 set nobomb                            " no BOM(Byte Order Mark)
 set nostartofline
 set laststatus=2
@@ -73,6 +73,13 @@ set ru           " word of line
 set confirm
 set laststatus=2
 set statusline=%4*%<\%m%<[%f\%r%h%w]\ [%{&ff},%{&fileencoding},%Y]%=\[Position=%l,%v,%p%%]
+set diffopt+=algorithm:patience,vertical
+
+if has("nvim")
+  if has("termguicolors")
+    set termguicolors
+  endif
+endif
 
 set fdm=syntax
 set fdn=3
@@ -83,6 +90,9 @@ filetype plugin on                    " enable filetype-specific plugins
 
 syntax on                             " syntax highlight
 syntax enable
+
+let g:python3_host_prog = '/usr/bin/python3'
+let g:python_host_prog = '/usr/bin/python'
 
 " ======================================
 "  custom key and plugin configurations
@@ -111,6 +121,9 @@ nmap <TAB> v>
 nmap <S-TAB> v<
 vmap <C-Right> >gv
 vmap <C-Left> <gv
+
+noremap j gj
+noremap k gk
 
 " remap VIM 0
 map 0 ^
@@ -154,4 +167,9 @@ inoremap <silent> <C-S-Down> <Esc>:m .+1<Cr>==gi
 
 "auto change work dir
 autocmd BufEnter * silent! lcd %:p:h
+
+if has('nvim-0.5')
+  autocmd TextYankPost * silent!
+          \ lua vim.highlight.on_yank{higroup="IncSearch", timeout=300}
+endif
 

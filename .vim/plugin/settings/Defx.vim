@@ -1,5 +1,11 @@
 autocmd FileType defx call s:defx_my_settings()
 
+augroup ReplaceNetrwByDefx
+  autocmd VimEnter * silent! autocmd! FileExplorer
+  autocmd StdinReadPre * let s:std_in=1
+  autocmd BufEnter * if isdirectory(expand("%")) && !exists("s:std_in") | execute 'Defx '.expand('%') | endif
+augroup END
+
 noremap <F2> :Defx -split=vertical -direction=topleft -winwidth=30 -toggle<CR>
 
 call defx#custom#option('_', {
@@ -16,8 +22,13 @@ function! s:defx_my_settings() abort
         \ defx#do_action('move')
   nnoremap <silent><buffer><expr> p
         \ defx#do_action('paste')
-  nnoremap <silent><buffer><expr> l
-        \ defx#do_action('drop')
+  if winwidth(0) > 50
+    nnoremap <silent><buffer><expr> l
+          \ defx#do_action('open')
+  else
+    nnoremap <silent><buffer><expr> l
+          \ defx#do_action('drop')
+  endif
   nnoremap <silent><buffer><expr> E
         \ defx#do_action('open', 'vsplit')
   nnoremap <silent><buffer><expr> P

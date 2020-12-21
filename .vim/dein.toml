@@ -1,0 +1,408 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'wsdjeg/dein-ui.vim'
+
+[[plugins]]
+repo = 'haya14busa/dein-command.vim'
+
+# Interface
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+repo = 'maximbaz/lightline-ale'
+
+[[plugins]]
+repo = 'taohexxx/lightline-buffer'
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+[[plugins]]
+repo = 'mhinz/vim-startify'
+
+[[plugins]]
+repo = 'junegunn/goyo.vim'
+on_cmd = 'Goyo'
+lazy = 1
+
+[[plugins]]
+repo = 'liuchengxu/vim-which-key'
+lazy = 1
+on_cmd = 'WhichKey'
+
+# Navigation
+
+[[plugins]]
+repo = 'Shougo/defx.nvim'
+hook_post_update = 'UpdateRemotePlugins'
+
+[[plugins]]
+repo = 'kristijanhusak/defx-icons'
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+hook_post_update = 'UpdateRemotePlugins'
+
+[[plugins]]
+repo = 'Shougo/neoyank.vim'
+
+# [[plugins]]
+# repo = 'francoiscabrol/ranger.vim'
+# hook_add = """
+# let g:ranger_map_keys = 0
+# """
+
+# [[plugins]]
+# repo = 'rbgrouleff/bclose.vim'
+
+# Motion & Keybinding
+
+[[plugins]]
+repo = "chaoren/vim-wordmotion"
+
+[[plugins]]
+repo = "terryma/vim-multiple-cursors"
+
+# [[plugins]]
+# repo = "tpope/vim-surround"
+
+[[plugins]]
+repo = "machakann/vim-sandwich"
+
+[[plugins]]
+repo = "wellle/targets.vim"
+
+[[plugins]]
+repo = "tommcdo/vim-exchange"
+
+[[plugins]]
+repo = "justinmk/vim-sneak"
+hook_add = """
+let g:sneak#label = 1
+nmap z <Plug>Sneak_s
+nmap Z <Plug>Sneak_S
+" visual-mode
+xmap z <Plug>Sneak_s
+xmap Z <Plug>Sneak_S
+" operator-pending-mode
+omap z <Plug>Sneak_s
+omap Z <Plug>Sneak_S
+
+map f <Plug>Sneak_f
+map F <Plug>Sneak_F
+map t <Plug>Sneak_t
+map T <Plug>Sneak_T
+"""
+
+[[plugins]]
+repo = "ryvnf/readline.vim"
+
+[[plugins]]
+repo = "AndrewRadev/splitjoin.vim"
+
+[[plugins]]
+repo = "triglav/vim-visual-increment"
+
+# Syntax Check
+
+[[plugins]]
+repo = "dense-analysis/ale"
+
+[[plugins]]
+repo = "mboughaba/vim-lessmess"
+
+# Completion
+
+[[plugins]]
+repo = "Shougo/deoplete.nvim"
+hook_post_update = "UpdateRemotePlugins"
+
+[[plugins]]
+repo = "deoplete-plugins/deoplete-jedi"
+
+[[plugins]]
+repo = "deoplete-plugins/deoplete-zsh"
+
+[[plugins]]
+repo = "deathlyfrantic/deoplete-spell"
+
+[[plugins]]
+repo = 'SirVer/ultisnips'
+
+[[plugins]]
+repo = "tmsvg/pear-tree"
+
+[[plugins]]
+repo = "tpope/vim-endwise"
+
+[[plugins]]
+repo = "mattn/emmet-vim"
+
+# Integration
+
+[[plugins]]
+repo = "tpope/vim-fugitive"
+
+[[plugins]]
+repo = "junegunn/gv.vim"
+lazy = 1
+on_cmd = ["GV", "GV!", "GV?"]
+
+[[plugins]]
+repo = "airblade/vim-gitgutter"
+
+[[plugins]]
+repo = "tpope/vim-eunuch"
+
+[[plugins]]
+repo = "editorconfig/editorconfig-vim"
+
+[[plugins]]
+repo = "Shougo/deol.nvim"
+
+[[plugins]]
+repo = "raghur/vim-ghost"
+lazy = 1
+hook_post_update = "GhostInstall"
+on_cmd = "GhostStart"
+
+# IME
+
+[[plugins]]
+repo = "vim-scripts/fcitx.vim"
+
+# Utilites
+
+[[plugins]]
+repo = "kshenoy/vim-signature"
+
+
+[[plugins]]
+repo = 'vim-scripts/SingleCompile'
+lazy = 1
+on_cmd = ['SingleCompile', 'SingleCompileRun']
+hook_post_source = "call SingleCompile#ConfigTemplate"
+
+[[plugins]]
+repo = "Yggdroot/indentLine"
+
+[[plugins]]
+repo = "andymass/vim-matchup"
+
+[[plugins]]
+repo = "tpope/vim-abolish"
+
+[[plugins]]
+repo = "tpope/vim-commentary"
+
+[[plugins]]
+repo = "tpope/vim-unimpaired"
+
+[[plugins]]
+repo = "tpope/vim-repeat"
+
+[[plugins]]
+repo = "godlygeek/tabular"
+lazy = 1
+on_cmd = "Tabularize"
+
+[[plugins]]
+repo = "sjl/gundo.vim"
+lazy = 1
+on_cmd = ["GundoToggle", "GundoShow"]
+
+[[plugins]]
+repo = "powerman/vim-plugin-viewdoc"
+
+[[plugins]]
+repo = "dhruvasagar/vim-dotoo"
+
+# Color Scheme
+
+[[plugins]]
+repo = "NLKNguyen/papercolor-theme"
+
+[[plugins]]
+repo = "tomasr/molokai"
+
+[[plugins]]
+repo = "Nequo/vim-allomancer"
+
+# Highlight & Language support
+
+[[plugins]]
+repo = "sheerun/vim-polyglot"
+merged = 0
+
+# [[plugins]]
+# repo = "autozimu/LanguageClient-neovim"
+# build = "./install.sh"
+# rev = "next"
+
+# Languages
+
+## Ruby
+
+[[plugins]]
+repo = "vim-ruby/vim-ruby"
+on_ft = "ruby"
+
+[[plugins]]
+repo = "tpope/vim-rails"
+on_ft = "ruby"
+
+[[plugins]]
+repo = "ngmy/vim-rubocop"
+on_ft = "ruby"
+
+[[plugins]]
+repo = "ecomba/vim-ruby-refactoring"
+on_ft = "ruby"
+
+[[plugins]]
+repo = "tpope/vim-rake"
+on_ft = "ruby"
+
+## C/C++
+
+[[plugins]]
+repo = "bfrg/vim-cpp-modern"
+
+## HTML
+
+[[plugins]]
+repo = "othree/html5.vim"
+on_ft = "html"
+
+[[plugins]]
+repo = "tpope/vim-haml"
+on_ft = "haml"
+
+[[plugins]]
+repo = "slim-template/vim-slim"
+on_ft = "slim"
+
+## JS
+
+[[plugins]]
+repo = "othree/yajs.vim"
+on_ft = ["javascript", "jsx"]
+
+[[plugins]]
+repo = "othree/es.next.syntax.vim"
+on_ft = ["javascript", "jsx"]
+
+[[plugins]]
+repo = "mxw/vim-jsx"
+on_ft = ["javascript", "jsx"]
+
+[[plugins]]
+repo = "othree/javascript-libraries-syntax.vim"
+on_ft = ["javascript", "jsx"]
+
+[[plugins]]
+repo = "digitaltoad/vim-pug"
+on_ft = ["pug", "jade"]
+
+[[plugins]]
+repo = "elzr/vim-json"
+on_ft = ["json", "cson"]
+
+## CSS
+
+[[plugins]]
+repo = "ap/vim-css-color"
+on_ft = "css"
+
+[[plugins]]
+repo = "hail2u/vim-css3-syntax"
+on_ft = "css"
+
+[[plugins]]
+repo = "cakebaker/scss-syntax.vim"
+on_ft = "scss"
+
+## Tools
+
+[[plugins]]
+repo = "vim-scripts/scons.vim"
+on_ft = "scons"
+
+[[plugins]]
+repo = "tpope/vim-bundler"
+on_ft = "ruby"
+
+[[plugins]]
+repo = "tfnico/vim-gradle"
+
+[[plugins]]
+repo = "keithbsmiley/rspec.vim"
+on_ft = "ruby"
+
+## Others
+
+[[plugins]]
+repo = "terminalnode/sway-vim-syntax"
+
+[[plugins]]
+repo = "plasticboy/vim-markdown"
+on_ft = "markdown"
+
+[[plugins]]
+repo = "jakwings/vim-pony"
+on_ft = "pony"
+
+[[plugins]]
+repo = "rust-lang/rust.vim"
+on_ft = "rust"
+
+[[plugins]]
+repo = "elixir-lang/vim-elixir"
+on_ft = "elixir"
+
+[[plugins]]
+repo = "derekwyatt/vim-scala"
+on_ft = "scala"
+
+[[plugins]]
+repo = "fatih/vim-go"
+on_ft = "go"
+
+[[plugins]]
+repo = "Shougo/vinarise.vim"
+lazy = 1
+on_cmd = "Vinarise"
+
+[[plugins]]
+repo = "rhysd/vim-crystal"
+on_ft = "crystal"
+
+[[plugins]]
+repo = "wakatime/vim-wakatime"
+
+[[plugins]]
+repo = "ClockworkNet/vim-apparmor"
+
+[[plugins]]
+repo = "jeroenbourgois/vim-actionscript"
+
+[[plugins]]
+repo = "jez/vim-github-hub"
+
+[[plugins]]
+repo = "OmniSharp/omnisharp-vim"
+lazy = 1
+on_ft = ["cs"]
+hook_add = """
+let g:OmniSharp_server_stdio = 1
+"""
+
+[[plugins]]
+repo = "ionide/Ionide-vim"
+build = "make fsautocomplete"
+lazy = 1
+on_ft = ["fsharp", "fsharp_proj"]
