@@ -25,6 +25,9 @@ repo = 'ryanoasis/vim-devicons'
 repo = 'mhinz/vim-startify'
 
 [[plugins]]
+repo = 'gelguy/wilder.nvim'
+
+[[plugins]]
 repo = 'junegunn/goyo.vim'
 on_cmd = 'Goyo'
 lazy = 1
@@ -33,6 +36,9 @@ lazy = 1
 repo = 'liuchengxu/vim-which-key'
 lazy = 1
 on_cmd = 'WhichKey'
+
+[[plugins]]
+repo = 'aca/vidir.nvim'
 
 # Navigation
 
@@ -49,6 +55,13 @@ hook_post_update = 'UpdateRemotePlugins'
 
 [[plugins]]
 repo = 'Shougo/neoyank.vim'
+
+[[plugins]]
+repo = 'nanotee/zoxide.vim'
+hook_add = """
+let g:zoxide_use_select = 1
+"""
+
 
 # [[plugins]]
 # repo = 'francoiscabrol/ranger.vim'
@@ -131,6 +144,9 @@ repo = "deoplete-plugins/deoplete-zsh"
 repo = "deathlyfrantic/deoplete-spell"
 
 [[plugins]]
+repo = "github/copilot.vim"
+
+[[plugins]]
 repo = 'SirVer/ultisnips'
 
 [[plugins]]
@@ -174,6 +190,7 @@ on_cmd = "GhostStart"
 
 [[plugins]]
 repo = "vim-scripts/fcitx.vim"
+if = 'executable("fcitx-remote")'
 
 # Utilites
 
@@ -238,10 +255,10 @@ repo = "Nequo/vim-allomancer"
 repo = "sheerun/vim-polyglot"
 merged = 0
 
-# [[plugins]]
-# repo = "autozimu/LanguageClient-neovim"
-# build = "./install.sh"
-# rev = "next"
+[[plugins]]
+repo = "autozimu/LanguageClient-neovim"
+build = "./install.sh"
+rev = "next"
 
 # Languages
 
